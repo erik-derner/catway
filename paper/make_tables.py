@@ -137,8 +137,38 @@ def table8():
         print(f"{st} & -- & " + " & ".join(cells) + " \\\\")
 
 
+BASE3 = ["P1_direct_prompt", "P1c_direct_prompt_with_costs", "P8_unguarded_agent"]
+
+
+def direction_counts(variant, s):
+    """significantly cheaper, cheaper (n.s.), equal, costlier (n.s.), significantly costlier"""
+    t = pd.read_csv(TMS / "test_comparisons.csv")
+    x = t[(t.variant == variant) & (t.set == s) & t.comparator.isin(BASE3)]
+    dd = x.diff_comparator_minus_variant.round(6)
+    sig = x.p_holm_selected < 0.05
+    return [int((sig & (dd > 0)).sum()), int((~sig & (dd > 0)).sum()), int((dd == 0).sum()),
+            int((~sig & (dd < 0)).sum()), int((sig & (dd < 0)).sum())]
+
+
+def table_directions():
+    print("% Table: direction and significance of the baseline comparisons (main text)")
+    names = {"household_test": "Household test", "new_domains_pooled": "New domains", "trustnav": "TRUST-NAV"}
+    for v, lab in ((PROPOSED, "\\name{}"), (LITE, "\\lite{}")):
+        pass
+    tot = {PROPOSED: [0] * 5, LITE: [0] * 5}
+    for s_, nm in names.items():
+        for k, (v, lab) in enumerate(((PROPOSED, r"\name{}"), (LITE, r"\lite{}"))):
+            c = direction_counts(v, s_)
+            tot[v] = [a + b for a, b in zip(tot[v], c)]
+            print(f"{nm if k == 0 else ''} & {lab} & " + " & ".join(map(str, c)) + " \\\\")
+    print("\\midrule")
+    for k, (v, lab) in enumerate(((PROPOSED, r"\name{}"), (LITE, r"\lite{}"))):
+        print(f"{'All three sets' if k == 0 else ''} & {lab} & " + " & ".join(map(str, tot[v])) + " \\\\")
+
+
 if __name__ == "__main__":
     table5()
     summary_rows()
     table7()
     table8()
+    table_directions()

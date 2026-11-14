@@ -68,7 +68,7 @@ python src/analyze.py --calibration-only --allow-missing-round2 --raw results/an
 python src/vote_by_source.py --raw results/answers --out results/tables_calibration_six_configs/vote_by_source_condition_calibration.csv
 python src/method_study.py
 python paper/make_figures.py            # Figures 3 to 6 and S1 -> paper/output/
-python paper/make_tables.py             # LaTeX rows of Tables 5 to 8 (printed)
+python paper/make_tables.py             # LaTeX rows of the result tables of the main text (printed)
 python paper/make_supplement_tables.py  # tables of Supplementary S3 -> paper/output/supp_tables.tex
 ```
 

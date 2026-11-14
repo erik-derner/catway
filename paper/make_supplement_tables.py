@@ -133,6 +133,33 @@ def comparisons():
                   f"tab:s-compare-{k + 1}", "@{}lllp{3.6cm}p{3.6cm}p{3.6cm}@{}", hdr, rows)
 
 
+BASE3 = ["P1_direct_prompt", "P1c_direct_prompt_with_costs", "P8_unguarded_agent"]
+
+
+def direction_counts(variant, s):
+    """significantly cheaper, cheaper (n.s.), equal, costlier (n.s.), significantly costlier"""
+    t = pd.read_csv(TMS / "test_comparisons.csv")
+    x = t[(t.variant == variant) & (t.set == s) & t.comparator.isin(BASE3)]
+    dd = x.diff_comparator_minus_variant.round(6)
+    sig = x.p_holm_selected < 0.05
+    return [int((sig & (dd > 0)).sum()), int((~sig & (dd > 0)).sum()), int((dd == 0).sum()),
+            int((~sig & (dd < 0)).sum()), int((sig & (dd < 0)).sum())]
+
+
+def directions():
+    rows = []
+    for s_ in ["production_cell", "mobile_robot", "trustnav_complete"]:
+        for k, (v, lab) in enumerate((("F_vote_scores|R_myopic|A_none", "CATWAY"), ("F_verbal_scores|R_myopic|A_none", "CATWAY-Lite"))):
+            c = direction_counts(v, s_)
+            rows.append(f"{SETNAME[s_] if k == 0 else ''} & {lab} & " + " & ".join(map(str, c)))
+    longtable("Direction and significance of the comparisons of CATWAY and CATWAY-Lite with the direct prompt, the "
+              "cost-aware prompt and the unguarded agent on each new domain alone and on TRUST-NAV with the completeness "
+              "sentence (18 per set and method: three baselines in six configurations). Sig.: Holm-adjusted $p<0.05$ over the "
+              "36 comparisons of the set; the other cheaper and costlier comparisons are not significant; equal: identical cost.",
+              "tab:s-directions", "@{}llrrrrr@{}",
+              "Set & Method & Sig. cheaper & Cheaper & Equal & Costlier & Sig. costlier", rows)
+
+
 def ablations():
     ab = pd.read_csv(TMS / "ablations.csv")
     sets = ["household_calibration_cv", "household_test", "new_domains_pooled", "trustnav"]
@@ -242,6 +269,7 @@ if __name__ == "__main__":
     variants()
     per_config()
     comparisons()
+    directions()
     ablations()
     calibration()
     calfit()
