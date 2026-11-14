@@ -9,11 +9,11 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 RES = HERE.parent / "results"
 OUTDIR = HERE / "output"
-T5 = RES / "tables_test_five_configs"
-TCV = RES / "tables_test_five_configs_calibration_cv"
-TGT = RES / "tables_calibration_gemma_think"
+T5 = RES / "tables_test_six_configs"
+TCV = RES / "tables_calibration_six_configs"
+TGT = RES / "tables_calibration_six_configs"   # the calibration tables of all six configurations
 TMS = RES / "tables_method_study"
-CONF = ["claude-haiku", "claude-haiku-nothink", "gpt-luna-think", "gpt-luna", "gemma"]
+CONF = ["claude-haiku", "claude-haiku-nothink", "gpt-luna-think", "gpt-luna", "gemma", "gemma-think"]
 LAB = {"claude-haiku": "Haiku-R", "claude-haiku-nothink": "Haiku", "gpt-luna-think": "Luna-R",
        "gpt-luna": "Luna", "gemma": "Gemma", "gemma-think": "Gemma-R"}
 SETS = ["household_test", "new_domains_pooled", "trustnav"]
@@ -36,7 +36,7 @@ def table5():
     vb = pd.read_csv(TGT / "vote_by_source_condition_calibration.csv")
     vb = vb[(vb.model == "gemma-think") & (vb["round"] == 1)]
     ms = pd.read_csv(TMS / "cv_by_config.csv").set_index(["variant", "model"])
-    for m in CONF + ["gemma-think"]:
+    for m in CONF:
         r = fi.loc[m]
         raw = cal[(cal.model == m) & cal.version.str.startswith("raw")].iloc[0]
         cc = cal[(cal.model == m) & cal.version.str.startswith("calibrated")].iloc[0]
@@ -48,7 +48,7 @@ def table5():
 
 
 def summary_rows():
-    """mean / worst over the five configurations for gates (method study) and baselines (policies)."""
+    """mean / worst over the six configurations for gates (method study) and baselines (policies)."""
     ts = pd.read_csv(TMS / "test_summary.csv").set_index(["variant", "set"])
     pol = pd.read_csv(T5 / "policies.csv")
     pol = pol[pol.block_rule.fillna("").str.startswith("block") | pol.block_rule.isna()]
@@ -60,7 +60,7 @@ def summary_rows():
             ("TRUST-NAV gate", "P3r_trustnav_runner_config", 1), ("Direct prompt", "P1_direct_prompt", 1),
             ("Cost-aware prompt", "P1c_direct_prompt_with_costs", 1), ("Unguarded agent", "P8_unguarded_agent", 1),
             ("Agent with checker", "P9_agent_plus_checker", 1)]
-    print("% Table 6: mean / worst cost over five configurations; unsafe executed (count over configurations, household + new)")
+    print("% Table 6: mean / worst cost over six configurations; unsafe executed (count over configurations, household + new)")
     nuns = {"household_test": 96, "new_domains_pooled": 46}
     for lab, v, g in gates:
         cells = []
@@ -103,7 +103,7 @@ def table7():
 
 
 def table8():
-    print("% Table 8: ablations; calibration CV mean/worst over six configurations; test mean/worst over five")
+    print("% Table 8: ablations; calibration CV mean/worst over six configurations; test mean/worst over six")
     sel = pd.read_csv(TMS / "selection_on_calibration.csv").set_index("variant")
     ts = pd.read_csv(TMS / "test_summary.csv").set_index(["variant", "set"])
     rows = [("Vote", "E_vote|R_myopic|A_none"), ("Stated probabilities", "E_verbal|R_myopic|A_none"),

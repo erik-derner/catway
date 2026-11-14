@@ -6,8 +6,7 @@ No model calls.
     python src/method_study.py --raw DIR [--raw DIR ...] --out DIR
 
 Inputs: answer files <config>.jsonl or <config>.jsonl.gz in the --raw folders; for a configuration found
-in several folders the file in the LAST folder listed wins (default: results/answers/calibration_gemma_think
-then results/answers/test_five_configs).
+in several folders the file in the LAST folder listed wins (default: results/answers).
 
 Every variant is fitted and selected on the household calibration split only (five-fold cross-validation,
 the same folds for every variant: analyze.cv_folds with seed 0 over whole clusters); the test sets are
@@ -80,8 +79,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import analyze as A  # noqa: E402
 
 ROOT = A.ROOT
-DEFAULT_RAW = [ROOT / "results" / "answers" / "calibration_gemma_think",
-               ROOT / "results" / "answers" / "test_five_configs"]
+DEFAULT_RAW = [ROOT / "results" / "answers"]
 OUT = ROOT / "results" / "tables_method_study"
 STATUS = "method study: fitted and selected on the household calibration split"
 SEED = 0
@@ -561,6 +559,7 @@ def main(argv=None):
     write(out, "test_summary", summ)
     write(out, "efficiency_frontier", frontier(seldf, summ))
     ablations(out, configs, proposed, lowcost, seldf)
+    write(out, "unguarded_agent_readable_plans", readable_plan_rows(configs, frozen, proposed))
     readme(out, configs, variants, proposed, lowcost, best, raw, time.time() - t0)
     print(f"method study done in {time.time() - t0:.0f} s; tables in {out}")
 
@@ -627,6 +626,39 @@ def ablations(out, configs, proposed, lowcost, seldf):
     write(out, "ablations", pd.DataFrame(rows))
     reasoning_pairs(out, configs, proposed, lowcost)
     unanimous(out, configs, proposed, lowcost)
+
+
+def readable_plan_rows(configs, frozen, gate):
+    """The unguarded agent (P8) on all items and on items whose plan is readable, against the selected
+    gate. An unreadable plan is a plan answer whose opening call cannot be read (status 'unparsed') and
+    that is not a provider block; P8 counts it as ask. Readable = status 'ok'. Differences are P8 minus
+    the gate with the 95% cluster-bootstrap interval and exact sign-flip p used everywhere else."""
+    rows = []
+    for m, c in configs.items():
+        tests = frozen.get((gate, m), {})
+        st = c.d.df["st_agent_plan"].to_numpy()
+        blocked = c.d.vr["agent_plan"]
+        for s, (rws, a, a2, P, inf) in tests.items():
+            y, grp = c.d.y[rws], c.d.group[rws]
+            readable = st[rws] == "ok"
+            unreadable = (st[rws] == "unparsed") & ~blocked[rws]
+            c8 = A.COST[c.pol["P8_unguarded_agent"][rws], y]
+            cg = A.COST[a[rws], y]
+            row = {"status": STATUS, "gate": gate, "model": m, "set": s, "n": len(rws),
+                   "n_unreadable_plans": int(unreadable.sum()), "share_unreadable_plans": float(unreadable.mean()),
+                   "n_blocked_plans": int(blocked[rws].sum()), "n_readable_plans": int(readable.sum()),
+                   "p8_cost_all": float(c8.mean()), "p8_cost_readable": float(c8[readable].mean()) if readable.any() else np.nan,
+                   "p8_cost_unreadable": float(c8[unreadable].mean()) if unreadable.any() else np.nan,
+                   "gate_cost_all": float(cg.mean()), "gate_cost_readable": float(cg[readable].mean()) if readable.any() else np.nan}
+            for lab, mask in (("all", np.ones(len(rws), bool)), ("readable", readable)):
+                if not mask.any():
+                    continue
+                diff, lo, hi = A.paired_bootstrap(c8[mask], cg[mask], grp[mask])
+                p, how = A.exact_sign_flip_p(c8[mask] - cg[mask], grp[mask])
+                row.update({f"p8_minus_gate_{lab}": diff, f"ci_low_{lab}": lo, f"ci_high_{lab}": hi,
+                            f"p_signflip_{lab}": p})
+            rows.append(row)
+    return pd.DataFrame(rows)
 
 
 def _frozen(c, gate):
@@ -744,6 +776,9 @@ def readme(out, configs, variants, proposed, lowcost, best, raw, secs):
         "  ablation_reasoning.csv: selected gates and the vote-only gate, reasoning on minus off per model (paired).",
         "  ablation_unanimous_cell.csv: items with ten 'clear' votes: execute share, cost, whether the gate depends on",
         "      a fitted pseudo-count (the 5/12 boundary).",
+        "  unguarded_agent_readable_plans.csv: per configuration and test set, unreadable plans (count, share; provider",
+        "      blocks counted apart), the unguarded agent's cost on all items and on readable-plan items, and the",
+        "      unguarded agent minus the PROPOSED gate on both, with 95% cluster-bootstrap CI and exact sign-flip p.",
         "", "ALL VARIANTS RUN:"] + [f"  {v['variant']}  (generations {v['generations_per_decision']}; defined for "
                                     f"{v['configurations']})" for v in variants]
     (out / "README.txt").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")

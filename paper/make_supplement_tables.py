@@ -10,12 +10,12 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "output" / "supp_tables.tex"
 RES = HERE.parent / "results"
 OUTDIR = HERE / "output"
-T5 = RES / "tables_test_five_configs"
-TCV = RES / "tables_test_five_configs_calibration_cv"
-TGT = RES / "tables_calibration_gemma_think"
+T5 = RES / "tables_test_six_configs"
+TCV = RES / "tables_calibration_six_configs"
+TGT = RES / "tables_calibration_six_configs"   # the calibration tables of all six configurations
 TMS = RES / "tables_method_study"
-CONF = ["claude-haiku", "claude-haiku-nothink", "gpt-luna-think", "gpt-luna", "gemma"]
-CONF6 = CONF + ["gemma-think"]
+CONF = ["claude-haiku", "claude-haiku-nothink", "gpt-luna-think", "gpt-luna", "gemma", "gemma-think"]
+CONF6 = CONF
 LAB = {"claude-haiku": "Haiku-R", "claude-haiku-nothink": "Haiku-N", "gpt-luna-think": "Luna-R",
        "gpt-luna": "Luna-N", "gemma": "Gemma-N", "gemma-think": "Gemma-R"}
 SETNAME = {"household_test": "Household test", "new_domains_pooled": "New domains (pooled)",
@@ -68,7 +68,7 @@ def variants():
         rows.append(" & ".join(cells))
     L.append(r"{\scriptsize")
     longtable("All 120 variants, ranked by mean cross-validated cost on the calibration split (six configurations). "
-              "Gen.: generations per decision. Test: mean/worst cost over five configurations. Token-probability "
+              "Gen.: generations per decision. Test: mean/worst cost over six configurations. Token-probability "
               "variants exist for Gemma only and were not eligible for selection.", "tab:s-variants",
               "@{}rlllrrrlll@{}",
               "Rank & Estimator & Rule & Adaptation & Gen. & CV mean & CV worst & Household & New domains & TRUST-NAV", rows)
@@ -79,23 +79,30 @@ def per_config():
     pol = pd.read_csv(T5 / "policies.csv")
     pol = pol[pol.block_rule.fillna("").str.startswith("block") | pol.block_rule.isna()]
     tb = pd.read_csv(TMS / "test_by_config.csv")
+    ncol = len(CONF) + 1
     for s in ["household_test", "new_domains_pooled", "production_cell", "mobile_robot", "trustnav", "trustnav_complete"]:
-        rows = []
-        for v, lab in GATES.items():
-            x = tb[(tb.variant == v) & (tb.set == s)].set_index("model")
-            cells = [f3(x.cost.get(m)) for m in CONF]
-            ep = [f3(x.episode_cost.get(m)) for m in CONF]
-            rows.append(lab + " & " + " & ".join(cells) + " & " + " & ".join(ep))
-        for p, lab in POL.items():
-            x = pol[(pol.policy == p) & (pol.set == s)].set_index("model")
-            cells = [f3(x.cost.get(m)) for m in CONF]
-            ep = [f3(x.episode_cost.get(m)) for m in CONF]
-            rows.append(lab + " & " + " & ".join(cells) + " & " + " & ".join(ep))
+        blocks = {"cost": [], "episode_cost": []}
+        for q in blocks:
+            for v, lab in GATES.items():
+                x = tb[(tb.variant == v) & (tb.set == s)].set_index("model")
+                blocks[q].append(lab + " & " + " & ".join(f3(x[q].get(m)) for m in CONF))
+            for pc, lab in POL.items():
+                x = pol[(pol.policy == pc) & (pol.set == s)].set_index("model")
+                blocks[q].append(lab + " & " + " & ".join(f3(x[q].get(m)) for m in CONF))
+        rows = [r"\multicolumn{%d}{@{}l}{\emph{Decision cost per item}}" % ncol] + blocks["cost"]
+        has_ep = not s.startswith("trustnav")
+        if has_ep:
+            rows += [r"\midrule \multicolumn{%d}{@{}l}{\emph{Episode cost with one clarification round}}" % ncol] + blocks["episode_cost"]
         n = int(pol[(pol.set == s)].n.iloc[0])
-        hdr = "Gate or baseline & " + " & ".join(LAB[m] for m in CONF) + " & " + " & ".join(LAB[m] for m in CONF)
-        longtable(f"{SETNAME[s]} ($n={n}$): decision cost per item (first five columns) and episode cost with one "
-                  "clarification round (last five; -- where the set has no clarification round).",
-                  f"tab:s-{s}", "@{}p{3.7cm}rrrrrrrrrr@{}", hdr, rows)
+        hdr = "Gate or baseline & " + " & ".join(LAB[m] for m in CONF)
+        note = ""
+        if s in ("household_test", "new_domains_pooled"):
+            note = (" The episode cost of Gemma-R's unguarded agent and agent with checker covers the items with a readable "
+                    "second plan (354 of 441 on the household test split, 174 of 181 in the new domains).")
+        cap = (f"{SETNAME[s]} ($n={n}$): decision cost per item"
+               + (" and episode cost with one clarification round, per configuration." if has_ep else
+                  " per configuration (no clarification round on this set).") + note)
+        longtable(cap, f"tab:s-{s}", "@{}l" + "r" * len(CONF) + "@{}", hdr, rows)
 
 
 def comparisons():
@@ -120,8 +127,8 @@ def comparisons():
                    + (" (household test split, new domains, TRUST-NAV)" if k == 0 else
                       " (single new domains and TRUST-NAV with the completeness sentence; with 25 quadruples per domain these comparisons have little power)")
                    + ": comparator cost minus gate cost per item, 95\\% cluster-bootstrap interval and Holm-adjusted $p$. "
-                   "Against the baselines, $p$ is adjusted over the 30 comparisons of the two selected gates with the three "
-                   "baselines in the five configurations on that set; against the vote-only gate, over all 2,208 comparisons "
+                   "Against the baselines, $p$ is adjusted over the 36 comparisons of the two selected gates with the three "
+                   "baselines in the six configurations on that set; against the vote-only gate, over all 2,640 comparisons "
                    "made on that set (every variant and configuration against the three baselines and the vote-only gate)."),
                   f"tab:s-compare-{k + 1}", "@{}lllp{3.6cm}p{3.6cm}p{3.6cm}@{}", hdr, rows)
 
@@ -142,7 +149,7 @@ def ablations():
 
 def calibration():
     rows = []
-    for d, ms in [(TCV, CONF), (TGT, ["gemma-think"])]:
+    for d, ms in [(TCV, CONF)]:
         c = pd.read_csv(d / "calibration_calibration_cv.csv")
         for m in ms:
             for _, r in c[c.model == m].iterrows():
@@ -216,7 +223,7 @@ def reasoning():
     rows = []
     for _, r in a.iterrows():
         g = {"PROPOSED": "CATWAY", "LOW-COST": "CATWAY-Lite", "VOTE-ONLY": "Vote only"}[r.gate]
-        mdl = {"claude-haiku-5-5": "Claude Haiku", "gpt-6-luna": "GPT-6 Luna"}.get(r.model, r.model)
+        mdl = {"claude-haiku-5-5": "Claude Haiku", "gpt-6-luna": "GPT-6 Luna", "gemma-4-31b-it": "Gemma 4"}.get(r.model, r.model)
         rows.append(f"{g} & {mdl} & {SETNAME[r.set]} & {r.cost_on:.3f} & {r.cost_off:.3f} & {r.diff_on_minus_off:.3f} [{r.ci_low:.3f}, {r.ci_high:.3f}]")
     longtable("Reasoning on against off on the same items (cost per item; 95\\% cluster-bootstrap interval).",
               "tab:s-reasoning", "@{}lllrrl@{}", "Gate & Model & Set & On & Off & On minus off", rows)

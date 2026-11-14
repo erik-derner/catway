@@ -29,10 +29,9 @@ data/
   processed/            built items of the new domains and TRUST-NAV; SHA256SUMS of all nine built files
   object_names.yaml, reconciliation.yaml, text_patches.yaml   inputs of build_data.py
 results/
-  answers/test_five_configs/         answers of five configurations on all sets (gzip JSON lines)
-  answers/calibration_gemma_think/   Gemma with and without reasoning on the calibration split
-  tables_test_five_configs/          test-set tables (analyze.py --unblind)
-  tables_test_five_configs_calibration_cv/, tables_calibration_gemma_think/   calibration tables
+  answers/                           answers of the six configurations on all sets (gzip JSON lines)
+  tables_test_six_configs/           test-set tables (analyze.py --unblind)
+  tables_calibration_six_configs/    calibration-split tables (cross-validated) and vote statistics
   tables_method_study/               variants, selection, test comparisons, ablations (README.txt there)
 tests/                  test suite (python -m pytest)
 licenses/               licences of the redistributed third-party data
@@ -64,20 +63,25 @@ The analysis needs the built items (previous section) and the stored answers; no
 Each command rewrites one folder of `results/`; afterwards `git status` shows no change.
 
 ```
-python src/analyze.py --unblind --raw results/answers/test_five_configs --tables results/tables_test_five_configs
-python src/analyze.py --calibration-only --raw results/answers/test_five_configs --tables results/tables_test_five_configs_calibration_cv
-python src/analyze.py --calibration-only --allow-missing-round2 --raw results/answers/calibration_gemma_think --tables results/tables_calibration_gemma_think
-python src/vote_by_source.py --raw results/answers/calibration_gemma_think --out results/tables_calibration_gemma_think/vote_by_source_condition_calibration.csv
+python src/analyze.py --unblind --allow-missing-round2 --raw results/answers --tables results/tables_test_six_configs
+python src/analyze.py --calibration-only --allow-missing-round2 --raw results/answers --tables results/tables_calibration_six_configs
+python src/vote_by_source.py --raw results/answers --out results/tables_calibration_six_configs/vote_by_source_condition_calibration.csv
 python src/method_study.py
 python paper/make_figures.py            # Figures 3 to 6 and S1 -> paper/output/
 python paper/make_tables.py             # LaTeX rows of Tables 5 to 8 (printed)
 python paper/make_supplement_tables.py  # tables of Supplementary S3 -> paper/output/supp_tables.tex
 ```
 
-The first command takes about 40 minutes, the method study about 7 minutes, the others a few minutes.
-All resampling uses fixed seeds. `--allow-missing-round2` is needed for Gemma with reasoning because 23
-of its 141 clarification-round plans were cut off at the output limit; the affected rows are marked
-`episode_incomplete`.
+The first command takes about an hour, the method study about 7 minutes, the others a few minutes.
+All resampling uses fixed seeds. `--allow-missing-round2` is needed for Gemma with reasoning, many of
+whose clarification-round plans were cut off at the output limit; the affected episode-cost rows (its
+unguarded agent and agent with checker on every set with a clarification round, and the uncalibrated
+vote gate on the household test split) are marked `episode_incomplete`.
+
+The six configurations are evaluated on every set. `config/analysis.yaml` gives Gemma with reasoning
+the role `descriptive`: it is analysed and tabulated like the other five, and only its comparisons of
+the vote-only gate with the direct prompt and the unguarded agent stay outside the Holm family of ten
+(`primary_test.csv`) and are reported unadjusted (`primary_comparisons_descriptive.csv`).
 
 ## Query a model
 

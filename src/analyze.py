@@ -2,7 +2,7 @@
 
 Inputs: the items in data/processed/<set>.jsonl (round-two versions in <set>_r2.jsonl and
 <set>_cal_r2.jsonl), one answer file per model configuration (<config>.jsonl or <config>.jsonl.gz,
-see answer_files; the released answers are in results/answers/<folder>/) and config/*.yaml (loss
+see answer_files; the released answers are in results/answers/) and config/*.yaml (loss
 matrices in costs.yaml, the item sets in sets.yaml, models.yaml, the configuration list and Holm
 family in analysis.yaml, the pilot-seen items in pilot_seen.yaml).
 

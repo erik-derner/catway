@@ -14,9 +14,9 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 RES = HERE.parent / "results"
 OUTDIR = HERE / "output"
-T5 = RES / "tables_test_five_configs"
-TCV = RES / "tables_test_five_configs_calibration_cv"
-TGT = RES / "tables_calibration_gemma_think"
+T5 = RES / "tables_test_six_configs"
+TCV = RES / "tables_calibration_six_configs"
+TGT = RES / "tables_calibration_six_configs"   # the calibration tables of all six configurations
 TMS = RES / "tables_method_study"
 
 ORDER = ["claude-haiku", "claude-haiku-nothink", "gpt-luna-think", "gpt-luna", "gemma", "gemma-think"]
@@ -75,7 +75,7 @@ def fig3():
     pol = policies()
     ms = pd.read_csv(TMS / "test_by_config.csv")
     models = [m for m in ORDER if m in set(ms.model)]
-    fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.9), sharey=True)
+    fig, axes = plt.subplots(1, 3, figsize=(7.2, 3.6), sharey=True)
     for ax, (s, title) in zip(axes, SETS):
         for i, (lab, src, key) in enumerate(ROWS_FIG3):
             y = len(ROWS_FIG3) - 1 - i
@@ -85,7 +85,7 @@ def fig3():
                 else:
                     v = pol[(pol.policy == key) & (pol.model == m) & (pol.set == s)].cost
                 if len(v):
-                    ax.plot(v.iloc[0], y + (j - 2) * 0.11, **mstyle(m))
+                    ax.plot(v.iloc[0], y + (j - 2.5) * 0.14, **{**mstyle(m), "ms": 3.6})
         ax.axhline(2.5, color="grey", lw=0.5, ls=":")
         if s == SETS[-1][0]:
             ax.text(1.18, 2.62, "CATWAY and ablations", ha="right", va="bottom", fontsize=6, color="#555555")
@@ -144,7 +144,9 @@ def fig5():
         for m in models:
             x = d[d.model == m].sort_values("lambda")
             st = mstyle(m)
-            ax.plot(x["lambda"], x.cost_P5, color=st["color"], lw=1.0, ls="-" if m in FILLED else "--")
+            k = models.index(m)
+            ax.plot(x["lambda"], x.cost_P5, color=st["color"], lw=1.0, ls="-" if m in FILLED else "--",
+                    marker=MRK[m], markevery=(k * 2, 9), ms=3.2, mfc=st["mfc"], mec=st["color"], mew=0.8)
             fr = x[x.is_frozen]
             if len(fr):
                 ax.plot(fr["lambda"].iloc[0], fr.cost_P5.iloc[0], **st)
@@ -196,9 +198,10 @@ def fig6():
             if len(r):
                 gx, gy = r.generations_per_decision.iloc[0], r.mean_cost.iloc[0]
                 ax.plot(gx, gy, mk, color=col, ms=5, zorder=3)
-                off = {"CATWAY": (-5, 6), "CATWAY-Lite": (4, -9), "vote only": (-6, 5), "stated only": (5, 4)}[lab]
+                off = {"CATWAY": (-28, 10), "CATWAY-Lite": (6, 14), "vote only": (8, 12), "stated only": (4, 30)}[lab]
                 ax.annotate(lab, (gx, gy), textcoords="offset points", xytext=off, fontsize=6, color=col,
-                            ha="right" if off[0] < 0 else "left", zorder=4)
+                            ha="right" if off[0] < 0 else "left", zorder=4,
+                            arrowprops=dict(arrowstyle="-", color=col, lw=0.5, shrinkA=0, shrinkB=2))
         if s != "household_calibration_cv":
             for lab, p in base:
                 c = pol[(pol.set == s) & (pol.policy == p)].cost.mean()
@@ -226,10 +229,11 @@ def fig7():
               ("Claude Haiku, new domains", "claude-haiku-5-5", "new_domains_pooled"),
               ("GPT-6 Luna, household", "gpt-6-luna", "household_test"),
               ("GPT-6 Luna, new domains", "gpt-6-luna", "new_domains_pooled"),
-              ("Gemma 4, calibration (CV)", "gemma", None)]
+              ("Gemma 4, household", "gemma-4-31b-it", "household_test"),
+              ("Gemma 4, new domains", "gemma-4-31b-it", "new_domains_pooled")]
     gates = [("VOTE-ONLY", "cost:P5_three_way_calibrated", "vote only", "#000000", "^", -0.15),
              ("PROPOSED", "cost:P7_learned", "CATWAY", "#0072B2", "o", 0.15)]
-    fig, ax = plt.subplots(figsize=(3.5, 2.5))
+    fig, ax = plt.subplots(figsize=(4.0, 2.9))
     for i, (lab, model, s) in enumerate(groups):
         y = len(groups) - 1 - i
         for g, q, glab, col, mk, dy in gates:
@@ -242,7 +246,7 @@ def fig7():
     ax.axvline(0, color="black", lw=0.6)
     ax.set_yticks(range(len(groups)))
     ax.set_yticklabels([g[0] for g in groups][::-1])
-    ax.set_xlabel("cost with reasoning minus cost without")
+    ax.set_xlabel("cost, reasoning on minus off")
     ax.grid(axis="x", lw=0.3, alpha=0.5)
     ax.legend(frameon=False, loc="lower center", ncol=2, bbox_to_anchor=(0.4, 1.0))
     fig.tight_layout()

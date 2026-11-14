@@ -9,7 +9,7 @@ from checker import check, first_action
 from conftest import ROOT
 
 ANSWERS = ROOT / "results" / "answers"
-CONFIGS = ["claude-haiku", "claude-haiku-nothink", "gemma", "gpt-luna", "gpt-luna-think"]
+CONFIGS = ["claude-haiku", "claude-haiku-nothink", "gemma", "gemma-think", "gpt-luna", "gpt-luna-think"]
 
 
 def items(name):
@@ -17,8 +17,7 @@ def items(name):
 
 
 def test_answer_folders():
-    assert sorted(A.model_name(f) for f in A.answer_files(ANSWERS / "test_five_configs")) == CONFIGS
-    assert sorted(A.model_name(f) for f in A.answer_files(ANSWERS / "calibration_gemma_think")) == ["gemma", "gemma-think"]
+    assert sorted(A.model_name(f) for f in A.answer_files(ANSWERS)) == CONFIGS
 
 
 @pytest.mark.parametrize("config", CONFIGS)
@@ -26,7 +25,7 @@ def test_new_domain_answers_are_current(config):
     """Every production-cell item has a current answer to every probe: the stored prompt hashes equal
     the hashes of the prompts that the code renders now from the committed items and configuration."""
     its = items("production_cell")
-    df = A.load(ANSWERS / "test_five_configs" / f"{config}.jsonl.gz", its, config)
+    df = A.load(ANSWERS / f"{config}.jsonl.gz", its, config)
     probes = [p for p in A.PROBES if p != "cls_logprob" or elicit.MODELS[config].get("logprobs")]
     for p in probes:
         assert (df[f"st_{p}"] != "stale").all() and (df[f"st_{p}"] != "absent").all(), p

@@ -19,9 +19,10 @@
 
 status: fixed                  # provisional | fixed (--unblind requires fixed)
 family_note: >-
-  Five confirmatory configurations, family of ten: Claude Haiku 5.5 with and without reasoning, GPT-6 Luna
-  with and without reasoning, Gemma 4 31B without reasoning. Gemma 4 31B with reasoning is descriptive
-  and evaluated on the household calibration split only.
+  Six configurations, all evaluated on every set. The Holm family of the vote-only gate's comparisons
+  has ten members: Claude Haiku 5.5 with and without reasoning, GPT-6 Luna with and without reasoning,
+  Gemma 4 31B without reasoning. Gemma 4 31B with reasoning is descriptive: it is analysed and tabulated
+  like the others, and its vote-only-gate comparisons are reported unadjusted.
 
 configurations:
   - name: claude-haiku
@@ -60,4 +61,4 @@ configurations:
     reasoning: "reasoning effort low (OpenRouter reasoning object)"
     reasoning_on: true
     role: descriptive
-    reason: "evaluated on the household calibration split only"
+    reason: "added to the comparison of gates and baselines; outside the Holm family of the vote-only gate"

@@ -1,6 +1,6 @@
 METHOD STUDY - tables written by src/method_study.py
-Produced by: python src/method_study.py --raw results/answers/calibration_gemma_think --raw results/answers/test_five_configs
-Configurations: claude-haiku (results/answers/test_five_configs/claude-haiku.jsonl.gz), claude-haiku-nothink (results/answers/test_five_configs/claude-haiku-nothink.jsonl.gz), gemma (results/answers/test_five_configs/gemma.jsonl.gz), gemma-think (results/answers/calibration_gemma_think/gemma-think.jsonl.gz), gpt-luna (results/answers/test_five_configs/gpt-luna.jsonl.gz), gpt-luna-think (results/answers/test_five_configs/gpt-luna-think.jsonl.gz)
+Produced by: python src/method_study.py --raw results/answers
+Configurations: claude-haiku (results/answers/claude-haiku.jsonl.gz), claude-haiku-nothink (results/answers/claude-haiku-nothink.jsonl.gz), gemma (results/answers/gemma.jsonl.gz), gemma-think (results/answers/gemma-think.jsonl.gz), gpt-luna (results/answers/gpt-luna.jsonl.gz), gpt-luna-think (results/answers/gpt-luna-think.jsonl.gz)
 Deterministic (fixed seeds: CV folds seed 0, inner selection seed 1, bootstrap analyze.N_BOOT=10000 seed 0; sign-flip p exact).
 
 SELECTION RULE (applied on calibration cross-validation only):
@@ -44,6 +44,9 @@ TABLES (every row has `status`):
   ablation_reasoning.csv: selected gates and the vote-only gate, reasoning on minus off per model (paired).
   ablation_unanimous_cell.csv: items with ten 'clear' votes: execute share, cost, whether the gate depends on
       a fitted pseudo-count (the 5/12 boundary).
+  unguarded_agent_readable_plans.csv: per configuration and test set, unreadable plans (count, share; provider
+      blocks counted apart), the unguarded agent's cost on all items and on readable-plan items, and the
+      unguarded agent minus the PROPOSED gate on both, with 95% cluster-bootstrap CI and exact sign-flip p.
 
 ALL VARIANTS RUN:
   E_vote|R_myopic|A_none  (generations 10; defined for claude-haiku,claude-haiku-nothink,gemma,gemma-think,gpt-luna,gpt-luna-think)

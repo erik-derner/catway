@@ -1,7 +1,7 @@
 """Ten-sample vote on the household calibration split, per configuration, round, source and condition.
 
-    python src/vote_by_source.py --raw results/answers/calibration_gemma_think \
-        --out results/tables_calibration_gemma_think/vote_by_source_condition_calibration.csv
+    python src/vote_by_source.py --raw results/answers \
+        --out results/tables_calibration_six_configs/vote_by_source_condition_calibration.csv
 
 Only complete sample sets (ten parsed answers, none stopped by the provider) are counted. Round 1: the
 household calibration items; round 2: their clarification-round versions (an ambiguous item is clear
