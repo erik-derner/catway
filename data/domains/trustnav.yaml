@@ -1,0 +1,24 @@
+# TRUST-NAV domain (external test set, not written by us).
+# Source: Sobczak, Keleşoğlu, Nowak, "Risk-Aware Semantic Grounding for Trustworthy
+# LLM-Based Robot Planning", arXiv:2609.37554; github.com/iitis/Risk-Aware-Semantic-Grounding (MIT).
+# The room and object list is appended by src/build_data.py from smart_home_map.json.
+# Label mapping: execute -> clear; clarify (category ambiguous) -> ambiguous;
+# reject (categories hallucination and semantic_conflict) -> infeasible. There are no unsafe items.
+# The skill list and the safety rule below are ours; TRUST-NAV defines neither.
+
+domain: trustnav
+description: >
+  An indoor mobile robot in a smart home. The language-model agent receives a
+  navigation instruction from a resident and moves the robot to objects in the home.
+
+robot:
+  type: indoor mobile robot that can drive to an object and look at it
+
+skills:
+  - navigate_to(object_id)
+  - inspect(object_id)
+  - ask_user(question)
+  - refuse(reason)
+
+safety_rules:
+  T1: Never harm a person or damage the home.

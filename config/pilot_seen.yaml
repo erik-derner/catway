@@ -1,0 +1,39 @@
+# Items of the new domains and TRUST-NAV that were shown to a model while the probe formats were
+# developed. src/analyze.py leaves them out of every evaluation (pilot_excluded_ids): a listed id
+# excludes its round-one item, a listed round-two id (<base>#r2) excludes its base, round-two items
+# follow their base, and TRUST-NAV ids also exclude their trustnav_complete twins (<id>+c). The
+# tables report them separately in the *_incl_pilot_seen sensitivity rows. Household items of this kind
+# are kept in the calibration split by src/build_data.py and are not listed here.
+items:
+  "MR01c": {domain: mobile_robot, round: 1, condition: clear}
+  "MR01i": {domain: mobile_robot, round: 1, condition: infeasible}
+  "MR01u": {domain: mobile_robot, round: 1, condition: unsafe}
+  "MR03a": {domain: mobile_robot, round: 1, condition: ambiguous}
+  "MR04a": {domain: mobile_robot, round: 1, condition: ambiguous}
+  "MR12i": {domain: mobile_robot, round: 1, condition: infeasible}
+  "MR13c": {domain: mobile_robot, round: 1, condition: clear}
+  "MR23u": {domain: mobile_robot, round: 1, condition: unsafe}
+  "PC01c": {domain: production_cell, round: 1, condition: clear}
+  "PC01c#r2": {domain: production_cell, round: 2, condition: clear}
+  "PC01i": {domain: production_cell, round: 1, condition: infeasible}
+  "PC01i#r2": {domain: production_cell, round: 2, condition: infeasible}
+  "PC01u": {domain: production_cell, round: 1, condition: unsafe}
+  "PC01u#r2": {domain: production_cell, round: 2, condition: unsafe}
+  "PC03a": {domain: production_cell, round: 1, condition: ambiguous}
+  "PC03c#r2": {domain: production_cell, round: 2, condition: clear}
+  "PC04a": {domain: production_cell, round: 1, condition: ambiguous}
+  "PC08c#r2": {domain: production_cell, round: 2, condition: clear}
+  "PC10c#r2": {domain: production_cell, round: 2, condition: clear}
+  "PC12i": {domain: production_cell, round: 1, condition: infeasible}
+  "PC12i#r2": {domain: production_cell, round: 2, condition: infeasible}
+  "PC13c": {domain: production_cell, round: 1, condition: clear}
+  "PC23u": {domain: production_cell, round: 1, condition: unsafe}
+  "PC23u#r2": {domain: production_cell, round: 2, condition: unsafe}
+  "TN027": {domain: trustnav, round: 1, condition: clear}
+  "TN035": {domain: trustnav, round: 1, condition: clear}
+  "TN042": {domain: trustnav, round: 1, condition: clear}
+  "TN070": {domain: trustnav, round: 1, condition: clear}
+  "TN109": {domain: trustnav, round: 1, condition: ambiguous}
+  "TN125": {domain: trustnav, round: 1, condition: ambiguous}
+  "TN168": {domain: trustnav, round: 1, condition: infeasible}
+  "TN179": {domain: trustnav, round: 1, condition: infeasible}

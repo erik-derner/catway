@@ -1,0 +1,133 @@
+model,set,source,version,bin,n,mean_conf,accuracy
+claude-haiku-nothink,household_calibration_cv,p_sample,raw,"[0.00,0.40)",0,,
+claude-haiku-nothink,household_calibration_cv,p_sample,raw,"[0.40,0.60)",8,0.5,0.25
+claude-haiku-nothink,household_calibration_cv,p_sample,raw,"[0.60,0.80)",28,0.7261904761904763,0.5
+claude-haiku-nothink,household_calibration_cv,p_sample,raw,"[0.80,0.90)",396,0.875,0.8686868686868687
+claude-haiku-nothink,household_calibration_cv,p_sample,raw,"[0.90,0.95)",0,,
+claude-haiku-nothink,household_calibration_cv,p_sample,raw,"[0.95,1.00]",0,,
+claude-haiku-nothink,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.00,0.40)",0,,
+claude-haiku-nothink,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.40,0.60)",8,0.4963269428001372,0.25
+claude-haiku-nothink,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.60,0.80)",28,0.7161852872479388,0.5
+claude-haiku-nothink,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.80,0.90)",396,0.8632757847554464,0.8686868686868687
+claude-haiku-nothink,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.90,0.95)",0,,
+claude-haiku-nothink,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.95,1.00]",0,,
+claude-haiku-nothink,household_calibration_cv,p_verbal,raw,"[0.00,0.40)",0,,
+claude-haiku-nothink,household_calibration_cv,p_verbal,raw,"[0.40,0.60)",18,0.5153086419753087,0.6111111111111112
+claude-haiku-nothink,household_calibration_cv,p_verbal,raw,"[0.60,0.80)",97,0.667938144329897,0.5360824742268041
+claude-haiku-nothink,household_calibration_cv,p_verbal,raw,"[0.80,0.90)",138,0.8139855072463767,0.8478260869565217
+claude-haiku-nothink,household_calibration_cv,p_verbal,raw,"[0.90,0.95)",133,0.9211278195488721,0.9774436090225563
+claude-haiku-nothink,household_calibration_cv,p_verbal,raw,"[0.95,1.00]",46,0.9717391304347827,0.9782608695652174
+claude-haiku-nothink,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.00,0.40)",0,,
+claude-haiku-nothink,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.40,0.60)",15,0.5269873144595588,0.5333333333333333
+claude-haiku-nothink,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.60,0.80)",88,0.6914280433066207,0.5568181818181818
+claude-haiku-nothink,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.80,0.90)",136,0.8489584542849268,0.8014705882352942
+claude-haiku-nothink,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.90,0.95)",85,0.9337917533560189,0.9764705882352941
+claude-haiku-nothink,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.95,1.00]",108,0.9692859281202262,0.9814814814814815
+claude-haiku,household_calibration_cv,p_sample,raw,"[0.00,0.40)",1,0.375,1.0
+claude-haiku,household_calibration_cv,p_sample,raw,"[0.40,0.60)",16,0.5052083333333333,0.5
+claude-haiku,household_calibration_cv,p_sample,raw,"[0.60,0.80)",45,0.7268518518518519,0.6888888888888889
+claude-haiku,household_calibration_cv,p_sample,raw,"[0.80,0.90)",370,0.875,0.9837837837837838
+claude-haiku,household_calibration_cv,p_sample,raw,"[0.90,0.95)",0,,
+claude-haiku,household_calibration_cv,p_sample,raw,"[0.95,1.00]",0,,
+claude-haiku,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.00,0.40)",1,0.39586929782144925,1.0
+claude-haiku,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.40,0.60)",16,0.5498805806505868,0.5
+claude-haiku,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.60,0.80)",23,0.7365050745271948,0.6956521739130435
+claude-haiku,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.80,0.90)",22,0.8851580551357615,0.6818181818181818
+claude-haiku,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.90,0.95)",0,,
+claude-haiku,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.95,1.00]",370,0.9831192888282402,0.9837837837837838
+claude-haiku,household_calibration_cv,p_verbal,raw,"[0.00,0.40)",0,,
+claude-haiku,household_calibration_cv,p_verbal,raw,"[0.40,0.60)",25,0.508,0.48
+claude-haiku,household_calibration_cv,p_verbal,raw,"[0.60,0.80)",111,0.6665765765765764,0.9279279279279279
+claude-haiku,household_calibration_cv,p_verbal,raw,"[0.80,0.90)",133,0.8359398496240602,0.9624060150375939
+claude-haiku,household_calibration_cv,p_verbal,raw,"[0.90,0.95)",116,0.9156896551724141,1.0
+claude-haiku,household_calibration_cv,p_verbal,raw,"[0.95,1.00]",47,0.965744680851064,1.0
+claude-haiku,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.00,0.40)",0,,
+claude-haiku,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.40,0.60)",11,0.5579395940566843,0.36363636363636365
+claude-haiku,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.60,0.80)",40,0.7440969753741331,0.8
+claude-haiku,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.80,0.90)",36,0.8437784617426943,0.9444444444444444
+claude-haiku,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.90,0.95)",38,0.9181594750113046,0.9210526315789473
+claude-haiku,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.95,1.00]",307,0.9891837849338272,0.9804560260586319
+gemma,household_calibration_cv,p_sample,raw,"[0.00,0.40)",0,,
+gemma,household_calibration_cv,p_sample,raw,"[0.40,0.60)",3,0.5416666666666666,0.3333333333333333
+gemma,household_calibration_cv,p_sample,raw,"[0.60,0.80)",7,0.6964285714285714,0.42857142857142855
+gemma,household_calibration_cv,p_sample,raw,"[0.80,0.90)",422,0.875,0.8909952606635071
+gemma,household_calibration_cv,p_sample,raw,"[0.90,0.95)",0,,
+gemma,household_calibration_cv,p_sample,raw,"[0.95,1.00]",0,,
+gemma,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.00,0.40)",0,,
+gemma,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.40,0.60)",3,0.546943995728189,0.3333333333333333
+gemma,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.60,0.80)",6,0.6903935908534012,0.5
+gemma,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.80,0.90)",349,0.8861163144976374,0.8997134670487106
+gemma,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.90,0.95)",74,0.9067854862497253,0.8378378378378378
+gemma,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.95,1.00]",0,,
+gemma,household_calibration_cv,p_logit,raw,"[0.00,0.40)",0,,
+gemma,household_calibration_cv,p_logit,raw,"[0.40,0.60)",1,0.5924661183258075,0.0
+gemma,household_calibration_cv,p_logit,raw,"[0.60,0.80)",1,0.7549142803986957,1.0
+gemma,household_calibration_cv,p_logit,raw,"[0.80,0.90)",4,0.8578122565307682,0.5
+gemma,household_calibration_cv,p_logit,raw,"[0.90,0.95)",3,0.9075957225447165,0.3333333333333333
+gemma,household_calibration_cv,p_logit,raw,"[0.95,1.00]",423,0.9996630809059949,0.8865248226950354
+gemma,household_calibration_cv,p_logit,calibrated out-of-fold,"[0.00,0.40)",0,,
+gemma,household_calibration_cv,p_logit,calibrated out-of-fold,"[0.40,0.60)",2,0.5347978488383474,0.5
+gemma,household_calibration_cv,p_logit,calibrated out-of-fold,"[0.60,0.80)",13,0.6920849096670774,0.46153846153846156
+gemma,household_calibration_cv,p_logit,calibrated out-of-fold,"[0.80,0.90)",350,0.8923430027439394,0.8971428571428571
+gemma,household_calibration_cv,p_logit,calibrated out-of-fold,"[0.90,0.95)",67,0.9070411296873067,0.8656716417910447
+gemma,household_calibration_cv,p_logit,calibrated out-of-fold,"[0.95,1.00]",0,,
+gemma,household_calibration_cv,p_verbal,raw,"[0.00,0.40)",0,,
+gemma,household_calibration_cv,p_verbal,raw,"[0.40,0.60)",0,,
+gemma,household_calibration_cv,p_verbal,raw,"[0.60,0.80)",1,0.7,1.0
+gemma,household_calibration_cv,p_verbal,raw,"[0.80,0.90)",6,0.7999999999999999,0.6666666666666666
+gemma,household_calibration_cv,p_verbal,raw,"[0.90,0.95)",1,0.9,1.0
+gemma,household_calibration_cv,p_verbal,raw,"[0.95,1.00]",424,1.0,0.9080188679245284
+gemma,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.00,0.40)",0,,
+gemma,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.40,0.60)",4,0.5832776091883216,1.0
+gemma,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.60,0.80)",4,0.6176486762883026,0.5
+gemma,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.80,0.90)",74,0.895688420023367,0.9594594594594594
+gemma,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.90,0.95)",350,0.9090770607083594,0.8971428571428571
+gemma,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.95,1.00]",0,,
+gpt-luna-think,household_calibration_cv,p_sample,raw,"[0.00,0.40)",0,,
+gpt-luna-think,household_calibration_cv,p_sample,raw,"[0.40,0.60)",29,0.5272988505747126,0.5172413793103449
+gpt-luna-think,household_calibration_cv,p_sample,raw,"[0.60,0.80)",67,0.730721393034826,0.6417910447761194
+gpt-luna-think,household_calibration_cv,p_sample,raw,"[0.80,0.90)",336,0.875,0.9613095238095238
+gpt-luna-think,household_calibration_cv,p_sample,raw,"[0.90,0.95)",0,,
+gpt-luna-think,household_calibration_cv,p_sample,raw,"[0.95,1.00]",0,,
+gpt-luna-think,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.00,0.40)",0,,
+gpt-luna-think,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.40,0.60)",29,0.5673569818059746,0.5172413793103449
+gpt-luna-think,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.60,0.80)",33,0.7280557856174027,0.6060606060606061
+gpt-luna-think,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.80,0.90)",34,0.8696693259945617,0.6764705882352942
+gpt-luna-think,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.90,0.95)",0,,
+gpt-luna-think,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.95,1.00]",336,0.9652839924587017,0.9613095238095238
+gpt-luna-think,household_calibration_cv,p_verbal,raw,"[0.00,0.40)",0,,
+gpt-luna-think,household_calibration_cv,p_verbal,raw,"[0.40,0.60)",1,0.55,0.0
+gpt-luna-think,household_calibration_cv,p_verbal,raw,"[0.60,0.80)",19,0.723157894736842,0.5263157894736842
+gpt-luna-think,household_calibration_cv,p_verbal,raw,"[0.80,0.90)",34,0.8423529411764706,0.5294117647058824
+gpt-luna-think,household_calibration_cv,p_verbal,raw,"[0.90,0.95)",62,0.9187096774193546,0.7258064516129032
+gpt-luna-think,household_calibration_cv,p_verbal,raw,"[0.95,1.00]",316,0.9859810126582278,0.939873417721519
+gpt-luna-think,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.00,0.40)",0,,
+gpt-luna-think,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.40,0.60)",10,0.5727554347707497,0.4
+gpt-luna-think,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.60,0.80)",91,0.7296737630464415,0.6373626373626373
+gpt-luna-think,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.80,0.90)",121,0.8533120506453219,0.9008264462809917
+gpt-luna-think,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.90,0.95)",74,0.9194071920009395,0.9054054054054054
+gpt-luna-think,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.95,1.00]",136,0.987734031054578,0.9705882352941176
+gpt-luna,household_calibration_cv,p_sample,raw,"[0.00,0.40)",1,0.375,0.0
+gpt-luna,household_calibration_cv,p_sample,raw,"[0.40,0.60)",29,0.5043103448275862,0.5172413793103449
+gpt-luna,household_calibration_cv,p_sample,raw,"[0.60,0.80)",81,0.7330246913580247,0.654320987654321
+gpt-luna,household_calibration_cv,p_sample,raw,"[0.80,0.90)",321,0.875,0.9065420560747663
+gpt-luna,household_calibration_cv,p_sample,raw,"[0.90,0.95)",0,,
+gpt-luna,household_calibration_cv,p_sample,raw,"[0.95,1.00]",0,,
+gpt-luna,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.00,0.40)",1,0.379394800789365,0.0
+gpt-luna,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.40,0.60)",29,0.5123011270128641,0.5172413793103449
+gpt-luna,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.60,0.80)",40,0.6862221141045521,0.625
+gpt-luna,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.80,0.90)",307,0.8810426976278694,0.8859934853420195
+gpt-luna,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.90,0.95)",55,0.9067854862497251,0.8545454545454545
+gpt-luna,household_calibration_cv,p_sample,calibrated out-of-fold,"[0.95,1.00]",0,,
+gpt-luna,household_calibration_cv,p_verbal,raw,"[0.00,0.40)",1,0.35,0.0
+gpt-luna,household_calibration_cv,p_verbal,raw,"[0.40,0.60)",14,0.5192857142857142,0.5
+gpt-luna,household_calibration_cv,p_verbal,raw,"[0.60,0.80)",30,0.7029999999999998,0.5666666666666667
+gpt-luna,household_calibration_cv,p_verbal,raw,"[0.80,0.90)",51,0.8394117647058823,0.6666666666666666
+gpt-luna,household_calibration_cv,p_verbal,raw,"[0.90,0.95)",47,0.9117021276595741,0.851063829787234
+gpt-luna,household_calibration_cv,p_verbal,raw,"[0.95,1.00]",289,0.9816608996539794,0.8927335640138409
+gpt-luna,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.00,0.40)",2,0.33798080394069957,0.5
+gpt-luna,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.40,0.60)",41,0.5270228174604761,0.5365853658536586
+gpt-luna,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.60,0.80)",120,0.714777795809217,0.775
+gpt-luna,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.80,0.90)",140,0.8570417163540589,0.8642857142857143
+gpt-luna,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.90,0.95)",34,0.922710681568828,0.8235294117647058
+gpt-luna,household_calibration_cv,p_verbal,calibrated out-of-fold,"[0.95,1.00]",95,0.9847109245841683,0.9578947368421052

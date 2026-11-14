@@ -1,0 +1,7 @@
+configuration,base_model,model_id,reasoning,reasoning_on,config_role,reason,status,n_items_with_current_answer,holm_family_size
+claude-haiku,claude-haiku-5-5,claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",True,confirmatory,,analysed,573,10
+claude-haiku-nothink,claude-haiku-5-5,claude-haiku-5-5,"thinking disabled, effort low",False,confirmatory,,analysed,573,10
+gpt-luna,gpt-6-luna,gpt-6-luna,effort none,False,confirmatory,,analysed,573,10
+gpt-luna-think,gpt-6-luna,gpt-6-luna,reasoning effort low (lowest effort with reasoning on),True,confirmatory,,analysed,573,10
+gemma,gemma-4-31b-it,google/gemma-4-31b-it,no reasoning field,False,confirmatory,,analysed,573,10
+gemma-think,gemma-4-31b-it,google/gemma-4-31b-it,reasoning effort low (OpenRouter reasoning object),True,descriptive,evaluated on the household calibration split only,MISSING: no answer file,0,10

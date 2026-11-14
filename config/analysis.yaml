@@ -1,0 +1,63 @@
+# Configurations analysed by src/analyze.py and the Holm family of the vote-only gate's comparisons.
+#
+# Each configuration (name = the key in config/models.yaml and the answer file <name>.jsonl[.gz]):
+#   model          the underlying model (configurations with the same model are compared side by side
+#                  in reasoning_pairs<suffix>.csv)
+#   model_id       the provider's model id
+#   reasoning      the reasoning setting in words (copied into the tables)
+#   reasoning_on   true / false (the side-by-side table reports "on minus off")
+#   role           confirmatory: evaluated on the test sets; enters the Holm family of primary_test.csv
+#                    with two comparisons (vote-only gate P5 against the direct prompt P1 and the unguarded
+#                    agent P8 on the pooled new domains), so the family has 2 x (number of confirmatory
+#                    configurations) members;
+#                  descriptive: analysed and tabulated the same way, but its P5-against-P1/P8 rows go to
+#                    primary_comparisons_descriptive<suffix>.csv with unadjusted p-values.
+#   reason         why a configuration is descriptive (required for descriptive ones)
+# An answer file whose configuration is not listed here stops the analysis with an error (except in
+# --mock runs). A listed configuration without answers is reported as missing (configurations<suffix>.csv);
+# under --unblind that is an error for a confirmatory one.
+
+status: fixed                  # provisional | fixed (--unblind requires fixed)
+family_note: >-
+  Five confirmatory configurations, family of ten: Claude Haiku 5.5 with and without reasoning, GPT-6 Luna
+  with and without reasoning, Gemma 4 31B without reasoning. Gemma 4 31B with reasoning is descriptive
+  and evaluated on the household calibration split only.
+
+configurations:
+  - name: claude-haiku
+    model: claude-haiku-5-5
+    model_id: claude-haiku-5-5
+    reasoning: "adaptive thinking, effort low (no thinking field)"
+    reasoning_on: true
+    role: confirmatory
+  - name: claude-haiku-nothink
+    model: claude-haiku-5-5
+    model_id: claude-haiku-5-5
+    reasoning: "thinking disabled, effort low"
+    reasoning_on: false
+    role: confirmatory
+  - name: gpt-luna
+    model: gpt-6-luna
+    model_id: gpt-6-luna
+    reasoning: "effort none"
+    reasoning_on: false
+    role: confirmatory
+  - name: gpt-luna-think
+    model: gpt-6-luna
+    model_id: gpt-6-luna
+    reasoning: "reasoning effort low (lowest effort with reasoning on)"
+    reasoning_on: true
+    role: confirmatory
+  - name: gemma
+    model: gemma-4-31b-it
+    model_id: google/gemma-4-31b-it
+    reasoning: "no reasoning field"
+    reasoning_on: false
+    role: confirmatory
+  - name: gemma-think
+    model: gemma-4-31b-it
+    model_id: google/gemma-4-31b-it
+    reasoning: "reasoning effort low (OpenRouter reasoning object)"
+    reasoning_on: true
+    role: descriptive
+    reason: "evaluated on the household calibration split only"

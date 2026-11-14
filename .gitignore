@@ -1,0 +1,15 @@
+# API keys (src/elicit.py reads .env if present)
+.env
+
+# built from the public sources (src/download_sources.py, src/build_data.py)
+data/raw/
+data/processed/household*.jsonl
+data/review/inventory_edits.csv
+
+# outputs
+results/raw/
+results/tables/
+paper/output/
+
+__pycache__/
+.pytest_cache/

@@ -1,0 +1,98 @@
+# Model configurations queried by src/elicit.py (pass the name on the command line). The request
+# settings of an entry are part of every stored prompt hash (src/elicit.py, request_settings), so a
+# change here makes the stored answers of that configuration stale.
+#
+# key_env:     name of the environment variable that holds the API key (never the key itself).
+# logprobs:    false -> the cls_logprob probe is skipped; confidence comes from the ten samples and the
+#              stated probabilities only.
+# temperature: false -> no temperature is sent; every call runs at the vendor default.
+# min_tokens:  floor for the output limit of every probe (reasoning tokens count against it).
+# probe_min_tokens: a higher floor for the listed probes only.
+# price_in / price_out: USD per million tokens, used for the --budget cap when the provider reports
+#              no cost.
+
+# Claude Haiku 5.5 with adaptive thinking at effort low (Haiku-R in the paper).
+claude-haiku:
+  provider: anthropic
+  id: claude-haiku-5-5
+  key_env: ANTHROPIC_API_KEY
+  logprobs: false
+  temperature: false
+  effort: low
+  min_tokens: 2000
+  probe_min_tokens: {agent_plan: 4000}
+  price_in: 0.10
+  price_out: 0.50
+
+# Claude Haiku 5.5 with thinking disabled (Haiku in the paper); elicit sends
+# thinking={"type": "disabled"}.
+claude-haiku-nothink:
+  provider: anthropic
+  id: claude-haiku-5-5
+  key_env: ANTHROPIC_API_KEY
+  logprobs: false
+  temperature: false
+  effort: low
+  thinking: disabled
+  min_tokens: 250
+  probe_min_tokens: {bin_infeasible: 1000, scores: 1000, verbal: 1000, action_costs: 1000, agent_plan: 1000}
+  price_in: 0.10
+  price_out: 0.50
+
+# GPT-6 Luna at reasoning effort "none" (Luna in the paper). The Responses API returns top_logprobs
+# that hold only the sampled token, so no four-way distribution can be formed: logprobs false.
+gpt-luna:
+  provider: openai
+  id: gpt-6-luna
+  key_env: OPENAI_API_KEY
+  logprobs: false
+  temperature: false
+  effort: none
+  min_tokens: 200
+  price_in: 0.10
+  price_out: 0.50
+
+# Gemma 4 31B without reasoning (Gemma in the paper), through OpenRouter, pinned to one endpoint
+# (Parasail, fp8) that returns 20 top log-probabilities; no fallback to other endpoints.
+gemma:
+  provider: openrouter
+  id: google/gemma-4-31b-it
+  key_env: OPENROUTER_API_KEY
+  logprobs: true
+  temperature: true
+  min_tokens: 0
+  routing:
+    order: [parasail/fp8]
+    allow_fallbacks: false
+    require_parameters: true
+  price_in: 0.15
+  price_out: 0.40
+
+# GPT-6 Luna at reasoning effort "low", the lowest effort with reasoning on (Luna-R in the paper).
+gpt-luna-think:
+  provider: openai
+  id: gpt-6-luna
+  key_env: OPENAI_API_KEY
+  logprobs: false
+  temperature: false
+  effort: low
+  min_tokens: 4000
+  price_in: 0.10
+  price_out: 0.50
+
+# Gemma 4 31B with reasoning at effort "low" through OpenRouter's reasoning object (Gemma-R in the
+# paper). With reasoning the answer is not the first output token, so logprobs is false.
+gemma-think:
+  provider: openrouter
+  id: google/gemma-4-31b-it
+  key_env: OPENROUTER_API_KEY
+  logprobs: false
+  temperature: true
+  reasoning: {effort: low}
+  min_tokens: 4000
+  routing:
+    order: [parasail/fp8]
+    allow_fallbacks: false
+    require_parameters: true
+  price_in: 0.15
+  price_out: 0.40

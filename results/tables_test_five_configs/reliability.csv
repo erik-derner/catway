@@ -1,0 +1,727 @@
+model,set,source,bin,n,mean_conf,accuracy,pilot_seen_items,base_model,reasoning,config_role
+claude-haiku-nothink,household_test,p_sample,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_sample,"[0.40,0.60)",7,0.5007418544565454,0.14285714285714285,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_sample,"[0.60,0.80)",23,0.6919039962768035,0.5217391304347826,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_sample,"[0.80,0.90)",410,0.8622766213473784,0.8512195121951219,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_sample,"[0.90,0.95)",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_sample,"[0.95,1.00]",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_sample,"[0.00,0.40)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_sample,"[0.40,0.60)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_sample,"[0.60,0.80)",1,0.7806397385010612,1.0,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_sample,"[0.80,0.90)",88,0.8622766213473784,0.9431818181818182,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_sample,"[0.90,0.95)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_sample,"[0.95,1.00]",0,,,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_sample,"[0.40,0.60)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_sample,"[0.60,0.80)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_sample,"[0.80,0.90)",92,0.8622766213473783,0.9239130434782609,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_sample,"[0.40,0.60)",1,0.5357290899621099,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_sample,"[0.60,0.80)",4,0.7602305177894819,0.5,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_sample,"[0.80,0.90)",193,0.8622766213473784,0.9481865284974094,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_sample,"[0.40,0.60)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_sample,"[0.60,0.80)",7,0.7806397385010612,0.42857142857142855,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_sample,"[0.80,0.90)",191,0.8622766213473784,0.93717277486911,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_sample,"[0.00,0.40)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_sample,"[0.40,0.60)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_sample,"[0.60,0.80)",1,0.7806397385010612,1.0,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_sample,"[0.80,0.90)",180,0.8622766213473783,0.9333333333333333,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_sample,"[0.90,0.95)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_sample,"[0.95,1.00]",0,,,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_sample,"[0.40,0.60)",1,0.5357290899621099,0.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_sample,"[0.60,0.80)",2,0.7806397385010613,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_sample,"[0.80,0.90)",97,0.8622766213473784,0.9381443298969072,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_sample,"[0.60,0.80)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_sample,"[0.80,0.90)",100,0.8622766213473783,0.93,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_sample,"[0.40,0.60)",1,0.5357290899621099,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_sample,"[0.60,0.80)",4,0.7602305177894819,0.5,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_sample,"[0.80,0.90)",201,0.8622766213473783,0.945273631840796,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_sample,"[0.60,0.80)",7,0.7806397385010612,0.42857142857142855,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_sample,"[0.80,0.90)",199,0.8622766213473783,0.9346733668341709,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_sample,"[0.40,0.60)",1,0.5357290899621099,0.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_sample,"[0.60,0.80)",2,0.7806397385010613,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_sample,"[0.80,0.90)",197,0.8622766213473783,0.934010152284264,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_verbal,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_verbal,"[0.40,0.60)",20,0.5127762090173096,0.6,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_verbal,"[0.60,0.80)",100,0.6937128546274028,0.63,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_verbal,"[0.80,0.90)",128,0.8494292380243809,0.78125,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_verbal,"[0.90,0.95)",55,0.9306239428336543,0.9818181818181818,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,household_test,p_verbal,"[0.95,1.00]",138,0.964018655043755,0.9927536231884058,none (household pilot items are in the calibration split),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_verbal,"[0.00,0.40)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_verbal,"[0.40,0.60)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_verbal,"[0.60,0.80)",11,0.72651416527519,0.9090909090909091,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_verbal,"[0.80,0.90)",32,0.8553537142125124,0.875,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_verbal,"[0.90,0.95)",13,0.9275880219727685,1.0,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell,p_verbal,"[0.95,1.00]",33,0.9665188298147149,1.0,excluded (11 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_verbal,"[0.40,0.60)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_verbal,"[0.60,0.80)",11,0.7048958112267171,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_verbal,"[0.80,0.90)",27,0.8544118742518243,0.8148148148148148,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_verbal,"[0.90,0.95)",18,0.9286533486517041,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot,p_verbal,"[0.95,1.00]",36,0.9646549787309975,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_verbal,"[0.40,0.60)",4,0.5334014533955622,0.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_verbal,"[0.60,0.80)",17,0.7033067509346215,0.7647058823529411,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_verbal,"[0.80,0.90)",41,0.8499897255592294,0.7804878048780488,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_verbal,"[0.90,0.95)",10,0.9305867896662899,0.9,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav,p_verbal,"[0.95,1.00]",126,0.9659926600856239,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_verbal,"[0.40,0.60)",2,0.5465205501642588,0.5,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_verbal,"[0.60,0.80)",25,0.6946901613707772,0.6,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_verbal,"[0.80,0.90)",33,0.8477770215319532,0.7878787878787878,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_verbal,"[0.90,0.95)",11,0.9314462683800641,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete,p_verbal,"[0.95,1.00]",127,0.9660046008617795,1.0,excluded (8 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_verbal,"[0.00,0.40)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_verbal,"[0.40,0.60)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_verbal,"[0.60,0.80)",22,0.7157049882509536,0.9545454545454546,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_verbal,"[0.80,0.90)",59,0.8549227027050789,0.847457627118644,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_verbal,"[0.90,0.95)",31,0.928206598754086,1.0,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled,p_verbal,"[0.95,1.00]",69,0.9655463857710361,1.0,excluded (19 items; unit item),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_verbal,"[0.60,0.80)",13,0.7252754725628523,0.9230769230769231,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_verbal,"[0.80,0.90)",34,0.8546256819665076,0.8529411764705882,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_verbal,"[0.90,0.95)",14,0.9265926178358426,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,production_cell_incl_pilot_seen,p_verbal,"[0.95,1.00]",39,0.9651009867475299,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_verbal,"[0.60,0.80)",12,0.7094680001024704,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_verbal,"[0.80,0.90)",28,0.8555282535331081,0.8214285714285714,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_verbal,"[0.90,0.95)",20,0.9288018785747407,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,mobile_robot_incl_pilot_seen,p_verbal,"[0.95,1.00]",40,0.9645004893977582,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_verbal,"[0.40,0.60)",4,0.5334014533955622,0.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_verbal,"[0.60,0.80)",18,0.6993042949818525,0.7777777777777778,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_verbal,"[0.80,0.90)",42,0.8498227598561627,0.7857142857142857,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_verbal,"[0.90,0.95)",11,0.9305460495040883,0.9090909090909091,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_incl_pilot_seen,p_verbal,"[0.95,1.00]",131,0.9659111909985757,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_verbal,"[0.40,0.60)",2,0.5465205501642588,0.5,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_verbal,"[0.60,0.80)",26,0.6919636364363213,0.6153846153846154,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_verbal,"[0.80,0.90)",34,0.8476358493113202,0.7941176470588235,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_verbal,"[0.90,0.95)",11,0.9314462683800641,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,trustnav_complete_incl_pilot_seen,p_verbal,"[0.95,1.00]",133,0.965715269887067,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.60,0.80)",25,0.7176878857818688,0.96,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.80,0.90)",62,0.8550332949320693,0.8387096774193549,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.90,0.95)",34,0.9278921829763709,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku-nothink,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.95,1.00]",79,0.9647969374565059,1.0,included (sensitivity analysis),claude-haiku-5-5,"thinking disabled, effort low",confirmatory
+claude-haiku,household_test,p_sample,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_sample,"[0.40,0.60)",12,0.5588712824989964,0.5,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_sample,"[0.60,0.80)",19,0.7556590802130385,0.631578947368421,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_sample,"[0.80,0.90)",20,0.8839989482874134,0.9,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_sample,"[0.90,0.95)",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_sample,"[0.95,1.00]",390,0.9815372480239387,0.9615384615384616,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_sample,"[0.00,0.40)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_sample,"[0.40,0.60)",1,0.591384049077838,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_sample,"[0.60,0.80)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_sample,"[0.80,0.90)",3,0.8839989482874135,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_sample,"[0.90,0.95)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_sample,"[0.95,1.00]",85,0.9815372480239388,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_sample,"[0.40,0.60)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_sample,"[0.60,0.80)",1,0.7864606485508884,1.0,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_sample,"[0.80,0.90)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_sample,"[0.95,1.00]",91,0.9815372480239388,0.989010989010989,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_sample,"[0.40,0.60)",4,0.5669994741437067,0.5,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_sample,"[0.60,0.80)",7,0.7864606485508884,0.14285714285714285,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_sample,"[0.80,0.90)",2,0.8839989482874135,0.5,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_sample,"[0.95,1.00]",185,0.9815372480239387,0.9459459459459459,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_sample,"[0.40,0.60)",6,0.5426148992095754,0.5,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_sample,"[0.60,0.80)",6,0.6889223488143631,0.6666666666666666,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_sample,"[0.80,0.90)",3,0.8839989482874135,1.0,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_sample,"[0.95,1.00]",183,0.9815372480239389,0.9344262295081968,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_sample,"[0.00,0.40)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_sample,"[0.40,0.60)",1,0.591384049077838,1.0,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_sample,"[0.60,0.80)",1,0.7864606485508884,1.0,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_sample,"[0.80,0.90)",3,0.8839989482874135,1.0,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_sample,"[0.90,0.95)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_sample,"[0.95,1.00]",176,0.9815372480239387,0.9943181818181818,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_sample,"[0.40,0.60)",1,0.591384049077838,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_sample,"[0.60,0.80)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_sample,"[0.80,0.90)",3,0.8839989482874135,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_sample,"[0.95,1.00]",96,0.9815372480239387,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_sample,"[0.60,0.80)",1,0.7864606485508884,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_sample,"[0.80,0.90)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_sample,"[0.95,1.00]",99,0.9815372480239388,0.98989898989899,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_sample,"[0.40,0.60)",4,0.5669994741437067,0.5,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_sample,"[0.60,0.80)",7,0.7864606485508884,0.14285714285714285,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_sample,"[0.80,0.90)",2,0.8839989482874135,0.5,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_sample,"[0.95,1.00]",193,0.9815372480239388,0.9430051813471503,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_sample,"[0.40,0.60)",6,0.5426148992095754,0.5,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_sample,"[0.60,0.80)",7,0.7028563916338667,0.7142857142857143,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_sample,"[0.80,0.90)",3,0.8839989482874135,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_sample,"[0.95,1.00]",190,0.9815372480239387,0.9315789473684211,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_sample,"[0.40,0.60)",1,0.591384049077838,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_sample,"[0.60,0.80)",1,0.7864606485508884,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_sample,"[0.80,0.90)",3,0.8839989482874135,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_sample,"[0.95,1.00]",195,0.9815372480239387,0.9948717948717949,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_verbal,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_verbal,"[0.40,0.60)",2,0.5456432734207152,0.5,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_verbal,"[0.60,0.80)",45,0.7558897818691406,0.7111111111111111,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_verbal,"[0.80,0.90)",35,0.845598572395595,0.8571428571428571,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_verbal,"[0.90,0.95)",44,0.9230254094027868,0.9545454545454546,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,household_test,p_verbal,"[0.95,1.00]",315,0.9890864187214355,0.9746031746031746,none (household pilot items are in the calibration split),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_verbal,"[0.00,0.40)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_verbal,"[0.40,0.60)",0,,,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_verbal,"[0.60,0.80)",2,0.7321765998300569,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_verbal,"[0.80,0.90)",6,0.8322082069266489,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_verbal,"[0.90,0.95)",7,0.9241783303164356,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell,p_verbal,"[0.95,1.00]",74,0.9899275646724124,1.0,excluded (11 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_verbal,"[0.40,0.60)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_verbal,"[0.60,0.80)",5,0.7553775154123643,1.0,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_verbal,"[0.80,0.90)",14,0.8466230353052334,0.9285714285714286,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_verbal,"[0.90,0.95)",8,0.9259959299832069,1.0,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot,p_verbal,"[0.95,1.00]",65,0.9906388201745292,1.0,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_verbal,"[0.40,0.60)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_verbal,"[0.60,0.80)",12,0.7332705353211405,0.25,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_verbal,"[0.80,0.90)",3,0.8436407282428829,0.3333333333333333,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_verbal,"[0.90,0.95)",10,0.9252302790263075,0.6,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav,p_verbal,"[0.95,1.00]",173,0.9933908877837054,0.9710982658959537,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_verbal,"[0.40,0.60)",2,0.5131345961615952,1.0,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_verbal,"[0.60,0.80)",9,0.7555070041917499,0.2222222222222222,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_verbal,"[0.80,0.90)",6,0.8492693325939058,0.8333333333333334,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_verbal,"[0.90,0.95)",6,0.921318983483309,0.6666666666666666,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete,p_verbal,"[0.95,1.00]",175,0.993131389650295,0.9714285714285714,excluded (8 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_verbal,"[0.00,0.40)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_verbal,"[0.40,0.60)",0,,,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_verbal,"[0.60,0.80)",7,0.7487486823888478,1.0,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_verbal,"[0.80,0.90)",20,0.8422985867916581,0.95,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_verbal,"[0.90,0.95)",15,0.9251477168053803,1.0,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled,p_verbal,"[0.95,1.00]",139,0.9902601661662078,1.0,excluded (19 items; unit item),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_verbal,"[0.60,0.80)",2,0.7321765998300569,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_verbal,"[0.80,0.90)",6,0.8322082069266489,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_verbal,"[0.90,0.95)",8,0.924054273551837,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,production_cell_incl_pilot_seen,p_verbal,"[0.95,1.00]",84,0.9898462444978064,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_verbal,"[0.60,0.80)",5,0.7553775154123643,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_verbal,"[0.80,0.90)",15,0.8438528593762823,0.9333333333333333,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_verbal,"[0.90,0.95)",8,0.9259959299832069,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,mobile_robot_incl_pilot_seen,p_verbal,"[0.95,1.00]",72,0.9906031503500847,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_verbal,"[0.60,0.80)",13,0.7302454124217537,0.23076923076923078,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_verbal,"[0.80,0.90)",3,0.8436407282428829,0.3333333333333333,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_verbal,"[0.90,0.95)",10,0.9252302790263075,0.6,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_incl_pilot_seen,p_verbal,"[0.95,1.00]",180,0.9931731367217067,0.9722222222222222,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_verbal,"[0.40,0.60)",2,0.5131345961615952,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_verbal,"[0.60,0.80)",9,0.7555070041917499,0.2222222222222222,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_verbal,"[0.80,0.90)",6,0.8492693325939058,0.8333333333333334,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_verbal,"[0.90,0.95)",9,0.9222316393101657,0.6666666666666666,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,trustnav_complete_incl_pilot_seen,p_verbal,"[0.95,1.00]",180,0.9931022380462625,0.9722222222222222,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.60,0.80)",7,0.7487486823888478,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.80,0.90)",21,0.8405258158192442,0.9523809523809523,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.90,0.95)",16,0.925025101767522,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+claude-haiku,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.95,1.00]",156,0.9901955856603964,1.0,included (sensitivity analysis),claude-haiku-5-5,"adaptive thinking, effort low (no thinking field)",confirmatory
+gemma,household_test,p_sample,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_sample,"[0.40,0.60)",1,0.546943995728189,1.0,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_sample,"[0.60,0.80)",3,0.6600655179103562,0.6666666666666666,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_sample,"[0.80,0.90)",437,0.8861144177858197,0.8604118993135011,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_sample,"[0.90,0.95)",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_sample,"[0.95,1.00]",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_sample,"[0.00,0.40)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_sample,"[0.40,0.60)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_sample,"[0.60,0.80)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_sample,"[0.80,0.90)",89,0.8853552910203465,0.9775280898876404,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_sample,"[0.90,0.95)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_sample,"[0.95,1.00]",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_sample,"[0.40,0.60)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_sample,"[0.60,0.80)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_sample,"[0.80,0.90)",92,0.8863085622746907,0.967391304347826,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_sample,"[0.40,0.60)",1,0.546943995728189,0.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_sample,"[0.60,0.80)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_sample,"[0.80,0.90)",197,0.8858778965811037,0.9289340101522843,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_sample,"[0.40,0.60)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_sample,"[0.60,0.80)",1,0.6317851373648143,1.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_sample,"[0.80,0.90)",197,0.8863085622746907,0.9238578680203046,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_sample,"[0.00,0.40)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_sample,"[0.40,0.60)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_sample,"[0.60,0.80)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_sample,"[0.80,0.90)",181,0.885839826685538,0.9723756906077348,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_sample,"[0.90,0.95)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_sample,"[0.95,1.00]",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_sample,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_sample,"[0.80,0.90)",100,0.8854601508583244,0.98,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_sample,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_sample,"[0.80,0.90)",100,0.8863085622746907,0.97,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_sample,"[0.40,0.60)",1,0.546943995728189,0.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_sample,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_sample,"[0.80,0.90)",205,0.8858947030471949,0.926829268292683,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_sample,"[0.60,0.80)",1,0.6317851373648143,1.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_sample,"[0.80,0.90)",205,0.8863085622746907,0.9219512195121952,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_sample,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_sample,"[0.80,0.90)",200,0.8858843565665074,0.975,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_logit,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_logit,"[0.40,0.60)",5,0.5286676227521385,0.8,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_logit,"[0.60,0.80)",12,0.7263683047597587,0.5,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_logit,"[0.80,0.90)",424,0.8958878731550766,0.8702830188679245,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_logit,"[0.90,0.95)",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_logit,"[0.95,1.00]",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_logit,"[0.00,0.40)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_logit,"[0.40,0.60)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_logit,"[0.60,0.80)",1,0.6538825749247569,0.0,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_logit,"[0.80,0.90)",88,0.8972788635006711,0.9886363636363636,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_logit,"[0.90,0.95)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_logit,"[0.95,1.00]",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_logit,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_logit,"[0.40,0.60)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_logit,"[0.60,0.80)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_logit,"[0.80,0.90)",92,0.895787269724333,0.967391304347826,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_logit,"[0.90,0.95)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_logit,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_logit,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_logit,"[0.40,0.60)",2,0.5232212619839753,0.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_logit,"[0.60,0.80)",1,0.7816547458892761,1.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_logit,"[0.80,0.90)",195,0.8968191261671523,0.9333333333333333,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_logit,"[0.90,0.95)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_logit,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_logit,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_logit,"[0.40,0.60)",1,0.5495831413437605,1.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_logit,"[0.60,0.80)",1,0.7816540878860001,0.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_logit,"[0.80,0.90)",196,0.8961419772644797,0.9285714285714286,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_logit,"[0.90,0.95)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_logit,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_logit,"[0.00,0.40)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_logit,"[0.40,0.60)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_logit,"[0.60,0.80)",1,0.6538825749247569,0.0,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_logit,"[0.80,0.90)",180,0.8965164933483205,0.9777777777777777,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_logit,"[0.90,0.95)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_logit,"[0.95,1.00]",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_logit,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_logit,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_logit,"[0.60,0.80)",1,0.6538825749247569,0.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_logit,"[0.80,0.90)",99,0.8972818659774364,0.98989898989899,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_logit,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_logit,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_logit,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_logit,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_logit,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_logit,"[0.80,0.90)",100,0.8959087596193371,0.97,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_logit,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_logit,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_logit,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_logit,"[0.40,0.60)",2,0.5232212619839753,0.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_logit,"[0.60,0.80)",1,0.7816547458892761,1.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_logit,"[0.80,0.90)",203,0.8968383060583219,0.9310344827586207,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_logit,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_logit,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_logit,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_logit,"[0.40,0.60)",1,0.5495831413437605,1.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_logit,"[0.60,0.80)",1,0.7816540878860001,0.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_logit,"[0.80,0.90)",204,0.8961876209988945,0.9264705882352942,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_logit,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_logit,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_logit,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_logit,"[0.40,0.60)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_logit,"[0.60,0.80)",1,0.6538825749247569,0.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_logit,"[0.80,0.90)",199,0.8965918627824119,0.9798994974874372,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_logit,"[0.90,0.95)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_logit,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_verbal,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_verbal,"[0.40,0.60)",7,0.5968710634284182,0.8571428571428571,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_verbal,"[0.60,0.80)",2,0.6589623107137786,0.0,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_verbal,"[0.80,0.90)",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_verbal,"[0.90,0.95)",432,0.9071967481611475,0.8912037037037037,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,household_test,p_verbal,"[0.95,1.00]",0,,,none (household pilot items are in the calibration split),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_verbal,"[0.00,0.40)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_verbal,"[0.40,0.60)",1,0.5523062342730211,0.0,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_verbal,"[0.60,0.80)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_verbal,"[0.80,0.90)",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_verbal,"[0.90,0.95)",88,0.9071967481611474,0.9886363636363636,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell,p_verbal,"[0.95,1.00]",0,,,excluded (11 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_verbal,"[0.40,0.60)",1,0.5523062342730211,1.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_verbal,"[0.60,0.80)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_verbal,"[0.80,0.90)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_verbal,"[0.90,0.95)",91,0.9071967481611471,0.978021978021978,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot,p_verbal,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_verbal,"[0.40,0.60)",2,0.5745886488507196,1.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_verbal,"[0.60,0.80)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_verbal,"[0.80,0.90)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_verbal,"[0.90,0.95)",196,0.9071967481611473,0.923469387755102,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav,p_verbal,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_verbal,"[0.40,0.60)",1,0.552306234273021,1.0,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_verbal,"[0.60,0.80)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_verbal,"[0.80,0.90)",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_verbal,"[0.90,0.95)",197,0.9071967481611473,0.9086294416243654,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete,p_verbal,"[0.95,1.00]",0,,,excluded (8 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_verbal,"[0.00,0.40)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_verbal,"[0.40,0.60)",2,0.5523062342730211,0.5,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_verbal,"[0.60,0.80)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_verbal,"[0.80,0.90)",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_verbal,"[0.90,0.95)",179,0.9071967481611473,0.9832402234636871,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled,p_verbal,"[0.95,1.00]",0,,,excluded (19 items; unit item),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.5523062342730211,0.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_verbal,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_verbal,"[0.80,0.90)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_verbal,"[0.90,0.95)",99,0.9071967481611473,0.98989898989899,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,production_cell_incl_pilot_seen,p_verbal,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.5523062342730211,1.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_verbal,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_verbal,"[0.80,0.90)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_verbal,"[0.90,0.95)",99,0.9071967481611473,0.9797979797979798,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,mobile_robot_incl_pilot_seen,p_verbal,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_verbal,"[0.40,0.60)",2,0.5745886488507196,1.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_verbal,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_verbal,"[0.80,0.90)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_verbal,"[0.90,0.95)",204,0.9071967481611474,0.9215686274509803,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_incl_pilot_seen,p_verbal,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.552306234273021,1.0,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_verbal,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_verbal,"[0.80,0.90)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_verbal,"[0.90,0.95)",205,0.9071967481611473,0.9073170731707317,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,trustnav_complete_incl_pilot_seen,p_verbal,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.40,0.60)",2,0.5523062342730211,0.5,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.60,0.80)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.80,0.90)",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.90,0.95)",198,0.9071967481611473,0.9848484848484849,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gemma,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.95,1.00]",0,,,included (sensitivity analysis),gemma-4-31b-it,no reasoning field,confirmatory
+gpt-luna-think,household_test,p_sample,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_sample,"[0.40,0.60)",27,0.5550109299469623,0.48148148148148145,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_sample,"[0.60,0.80)",38,0.7360502741290506,0.7105263157894737,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_sample,"[0.80,0.90)",29,0.8688372046900797,0.7931034482758621,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_sample,"[0.90,0.95)",0,,,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_sample,"[0.95,1.00]",347,0.9640429284885533,0.968299711815562,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_sample,"[0.00,0.40)",0,,,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_sample,"[0.40,0.60)",0,,,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_sample,"[0.60,0.80)",2,0.7260286189923689,1.0,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_sample,"[0.80,0.90)",3,0.8688372046900796,1.0,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_sample,"[0.90,0.95)",0,,,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_sample,"[0.95,1.00]",84,0.9640429284885533,1.0,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_sample,"[0.40,0.60)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_sample,"[0.60,0.80)",2,0.7260286189923689,1.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_sample,"[0.80,0.90)",5,0.8688372046900795,0.8,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_sample,"[0.95,1.00]",85,0.9640429284885533,0.9882352941176471,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_sample,"[0.40,0.60)",4,0.5118157404458028,0.75,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_sample,"[0.60,0.80)",5,0.7165080466125214,0.4,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_sample,"[0.80,0.90)",7,0.8688372046900797,0.7142857142857143,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_sample,"[0.95,1.00]",182,0.9640429284885532,0.9340659340659341,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_sample,"[0.40,0.60)",4,0.5594186023450398,0.75,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_sample,"[0.60,0.80)",8,0.7379293344671782,0.5,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_sample,"[0.80,0.90)",2,0.8688372046900795,0.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_sample,"[0.95,1.00]",184,0.9640429284885532,0.9402173913043478,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_sample,"[0.00,0.40)",0,,,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_sample,"[0.40,0.60)",0,,,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_sample,"[0.60,0.80)",4,0.7260286189923689,1.0,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_sample,"[0.80,0.90)",8,0.8688372046900796,0.875,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_sample,"[0.90,0.95)",0,,,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_sample,"[0.95,1.00]",169,0.9640429284885533,0.9940828402366864,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_sample,"[0.60,0.80)",2,0.7260286189923689,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_sample,"[0.80,0.90)",3,0.8688372046900796,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_sample,"[0.95,1.00]",95,0.9640429284885532,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_sample,"[0.60,0.80)",3,0.7418962396254479,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_sample,"[0.80,0.90)",5,0.8688372046900795,0.8,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_sample,"[0.95,1.00]",92,0.9640429284885532,0.9891304347826086,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_sample,"[0.40,0.60)",4,0.5118157404458028,0.75,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_sample,"[0.60,0.80)",5,0.7165080466125214,0.4,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_sample,"[0.80,0.90)",7,0.8688372046900797,0.7142857142857143,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_sample,"[0.95,1.00]",190,0.9640429284885532,0.9263157894736842,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_sample,"[0.40,0.60)",5,0.5641788885349636,0.8,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_sample,"[0.60,0.80)",8,0.7379293344671782,0.5,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_sample,"[0.80,0.90)",2,0.8688372046900795,0.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_sample,"[0.95,1.00]",191,0.9640429284885531,0.93717277486911,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_sample,"[0.40,0.60)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_sample,"[0.60,0.80)",5,0.7355491913722163,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_sample,"[0.80,0.90)",8,0.8688372046900796,0.875,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_sample,"[0.95,1.00]",187,0.9640429284885531,0.9946524064171123,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_verbal,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_verbal,"[0.40,0.60)",9,0.5369603233230571,0.4444444444444444,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_verbal,"[0.60,0.80)",91,0.7169894661465444,0.6813186813186813,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_verbal,"[0.80,0.90)",130,0.850674242600667,0.9,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_verbal,"[0.90,0.95)",79,0.9140000489114224,0.8860759493670886,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,household_test,p_verbal,"[0.95,1.00]",132,0.987703268832355,0.9924242424242424,none (household pilot items are in the calibration split),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_verbal,"[0.00,0.40)",0,,,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_verbal,"[0.40,0.60)",0,,,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_verbal,"[0.60,0.80)",3,0.7191816658389861,1.0,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_verbal,"[0.80,0.90)",20,0.8561586691259974,0.95,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_verbal,"[0.90,0.95)",10,0.9267654831417268,0.9,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell,p_verbal,"[0.95,1.00]",56,0.9877032688323553,1.0,excluded (11 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_verbal,"[0.40,0.60)",1,0.5265332063029292,0.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_verbal,"[0.60,0.80)",12,0.7126249119402952,0.75,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_verbal,"[0.80,0.90)",20,0.850245491890281,1.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_verbal,"[0.90,0.95)",9,0.9198871837922074,1.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot,p_verbal,"[0.95,1.00]",50,0.9877032688323553,1.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_verbal,"[0.40,0.60)",2,0.5764327544686283,0.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_verbal,"[0.60,0.80)",26,0.7437549989360975,0.6923076923076923,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_verbal,"[0.80,0.90)",56,0.8458634698839003,0.9464285714285714,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_verbal,"[0.90,0.95)",57,0.9259869687264222,0.9824561403508771,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav,p_verbal,"[0.95,1.00]",57,0.9877032688323553,0.9824561403508771,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_verbal,"[0.40,0.60)",1,0.5699587148948878,0.0,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_verbal,"[0.60,0.80)",10,0.7365275300888492,0.6,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_verbal,"[0.80,0.90)",44,0.8520122702843698,0.8181818181818182,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_verbal,"[0.90,0.95)",28,0.9257406328525342,0.8571428571428571,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete,p_verbal,"[0.95,1.00]",115,0.987703268832355,0.991304347826087,excluded (8 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_verbal,"[0.00,0.40)",0,,,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_verbal,"[0.40,0.60)",1,0.5265332063029292,0.0,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_verbal,"[0.60,0.80)",15,0.7139362627200333,0.8,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_verbal,"[0.80,0.90)",40,0.8532020805081391,0.975,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_verbal,"[0.90,0.95)",19,0.9235073413445861,0.9473684210526315,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled,p_verbal,"[0.95,1.00]",106,0.9877032688323552,1.0,excluded (19 items; unit item),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_verbal,"[0.40,0.60)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_verbal,"[0.60,0.80)",3,0.7191816658389861,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_verbal,"[0.80,0.90)",22,0.8584504431535014,0.9545454545454546,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_verbal,"[0.90,0.95)",11,0.9272259472893503,0.9090909090909091,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,production_cell_incl_pilot_seen,p_verbal,"[0.95,1.00]",64,0.9877032688323553,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.5265332063029292,0.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_verbal,"[0.60,0.80)",13,0.7142803989682359,0.7692307692307693,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_verbal,"[0.80,0.90)",21,0.8517275248206746,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_verbal,"[0.90,0.95)",10,0.9210815242895452,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,mobile_robot_incl_pilot_seen,p_verbal,"[0.95,1.00]",55,0.9877032688323553,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_verbal,"[0.40,0.60)",3,0.5800896581298817,0.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_verbal,"[0.60,0.80)",27,0.7450026119105225,0.7037037037037037,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_verbal,"[0.80,0.90)",59,0.8459532441890275,0.9322033898305084,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_verbal,"[0.90,0.95)",59,0.926185057541309,0.9830508474576272,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_incl_pilot_seen,p_verbal,"[0.95,1.00]",58,0.9877032688323553,0.9827586206896551,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.5699587148948878,0.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_verbal,"[0.60,0.80)",13,0.7310672012331072,0.5384615384615384,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_verbal,"[0.80,0.90)",44,0.8520122702843698,0.8181818181818182,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_verbal,"[0.90,0.95)",30,0.9261466299134042,0.8666666666666667,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,trustnav_complete_incl_pilot_seen,p_verbal,"[0.95,1.00]",118,0.9877032688323549,0.9915254237288136,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.5265332063029292,0.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.60,0.80)",16,0.7151993865065016,0.8125,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.80,0.90)",43,0.8551671574560743,0.9767441860465116,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.90,0.95)",21,0.9243000315751573,0.9523809523809523,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna-think,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.95,1.00]",119,0.9877032688323548,1.0,included (sensitivity analysis),gpt-6-luna,reasoning effort low (lowest effort with reasoning on),confirmatory
+gpt-luna,household_test,p_sample,"[0.00,0.40)",5,0.379394800789365,0.4,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_sample,"[0.40,0.60)",39,0.529802432476148,0.5128205128205128,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_sample,"[0.60,0.80)",59,0.6732745178363975,0.559322033898305,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_sample,"[0.80,0.90)",338,0.8903383731371141,0.9230769230769231,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_sample,"[0.90,0.95)",0,,,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_sample,"[0.95,1.00]",0,,,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_sample,"[0.00,0.40)",0,,,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_sample,"[0.40,0.60)",2,0.5519212018418517,0.5,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_sample,"[0.60,0.80)",3,0.6956932027189239,0.6666666666666666,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_sample,"[0.80,0.90)",84,0.8928662324931944,1.0,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_sample,"[0.90,0.95)",0,,,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_sample,"[0.95,1.00]",0,,,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_sample,"[0.40,0.60)",4,0.50878960157873,0.75,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_sample,"[0.60,0.80)",2,0.638184402368095,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_sample,"[0.80,0.90)",86,0.8929617620618834,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_sample,"[0.40,0.60)",8,0.50878960157873,0.875,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_sample,"[0.60,0.80)",7,0.6628310310898788,0.42857142857142855,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_sample,"[0.80,0.90)",183,0.8932029350713607,0.9453551912568307,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_sample,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_sample,"[0.40,0.60)",3,0.5519212018418517,0.6666666666666666,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_sample,"[0.60,0.80)",12,0.6885046026750703,0.3333333333333333,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_sample,"[0.80,0.90)",183,0.8936743186807939,0.9289617486338798,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_sample,"[0.90,0.95)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_sample,"[0.95,1.00]",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_sample,"[0.00,0.40)",0,,,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_sample,"[0.40,0.60)",6,0.5231668016664373,0.6666666666666666,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_sample,"[0.60,0.80)",5,0.6726896825785924,0.8,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_sample,"[0.80,0.90)",170,0.8929145592161783,1.0,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_sample,"[0.90,0.95)",0,,,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_sample,"[0.95,1.00]",0,,,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_sample,"[0.40,0.60)",2,0.5519212018418517,0.5,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_sample,"[0.60,0.80)",3,0.6956932027189239,0.6666666666666666,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_sample,"[0.80,0.90)",95,0.8924338354980753,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_sample,"[0.40,0.60)",4,0.50878960157873,0.75,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_sample,"[0.60,0.80)",2,0.638184402368095,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_sample,"[0.80,0.90)",94,0.8933032294563465,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_sample,"[0.40,0.60)",9,0.5039972015494942,0.8888888888888888,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_sample,"[0.60,0.80)",7,0.6628310310898788,0.42857142857142855,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_sample,"[0.80,0.90)",190,0.8933418691878254,0.9421052631578948,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_sample,"[0.40,0.60)",4,0.5519212018418517,0.5,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_sample,"[0.60,0.80)",13,0.6912694488457832,0.3076923076923077,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_sample,"[0.80,0.90)",189,0.8937790705940012,0.9312169312169312,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_sample,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_sample,"[0.40,0.60)",6,0.5231668016664373,0.6666666666666666,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_sample,"[0.60,0.80)",5,0.6726896825785924,0.8,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_sample,"[0.80,0.90)",189,0.8928662324931944,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_sample,"[0.90,0.95)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_sample,"[0.95,1.00]",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_verbal,"[0.00,0.40)",0,,,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_verbal,"[0.40,0.60)",33,0.527916032665917,0.42424242424242425,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_verbal,"[0.60,0.80)",141,0.7155460407439903,0.6737588652482269,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_verbal,"[0.80,0.90)",119,0.8588675904786858,0.8487394957983193,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_verbal,"[0.90,0.95)",42,0.9228071918374434,0.9047619047619048,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,household_test,p_verbal,"[0.95,1.00]",106,0.9845755090301858,0.9811320754716981,none (household pilot items are in the calibration split),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_verbal,"[0.00,0.40)",0,,,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_verbal,"[0.40,0.60)",1,0.5039003873996375,0.0,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_verbal,"[0.60,0.80)",18,0.7401540998648337,1.0,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_verbal,"[0.80,0.90)",13,0.8627758184005752,1.0,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_verbal,"[0.90,0.95)",4,0.9232046764303473,1.0,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell,p_verbal,"[0.95,1.00]",53,0.9845755090301858,0.9622641509433962,excluded (11 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_verbal,"[0.40,0.60)",2,0.5889393669438587,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_verbal,"[0.60,0.80)",26,0.7163818763066829,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_verbal,"[0.80,0.90)",11,0.8625193008531152,0.8181818181818182,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_verbal,"[0.90,0.95)",8,0.9232046764303473,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot,p_verbal,"[0.95,1.00]",45,0.9845755090301858,0.9555555555555556,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_verbal,"[0.40,0.60)",4,0.4884130956484969,0.5,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_verbal,"[0.60,0.80)",31,0.7297039000527393,0.6774193548387096,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_verbal,"[0.80,0.90)",73,0.856797971996535,0.9726027397260274,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_verbal,"[0.90,0.95)",31,0.9232046764303475,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav,p_verbal,"[0.95,1.00]",59,0.9845755090301856,0.9830508474576272,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_verbal,"[0.00,0.40)",0,,,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_verbal,"[0.40,0.60)",6,0.5439681725053808,0.16666666666666666,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_verbal,"[0.60,0.80)",18,0.7130135406714703,0.6666666666666666,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_verbal,"[0.80,0.90)",52,0.858302622312438,0.9230769230769231,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_verbal,"[0.90,0.95)",18,0.9232046764303473,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete,p_verbal,"[0.95,1.00]",104,0.9845755090301859,1.0,excluded (8 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_verbal,"[0.00,0.40)",0,,,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_verbal,"[0.40,0.60)",3,0.5605930404291183,0.6666666666666666,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_verbal,"[0.60,0.80)",44,0.7261068768531993,1.0,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_verbal,"[0.80,0.90)",24,0.8626582478579895,0.9166666666666666,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_verbal,"[0.90,0.95)",12,0.9232046764303471,1.0,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled,p_verbal,"[0.95,1.00]",98,0.9845755090301856,0.9591836734693877,excluded (19 items; unit item),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_verbal,"[0.40,0.60)",1,0.5039003873996375,0.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_verbal,"[0.60,0.80)",20,0.7315841259225379,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_verbal,"[0.80,0.90)",13,0.8627758184005752,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_verbal,"[0.90,0.95)",5,0.9232046764303472,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,production_cell_incl_pilot_seen,p_verbal,"[0.95,1.00]",61,0.9845755090301858,0.9672131147540983,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_verbal,"[0.40,0.60)",2,0.5889393669438587,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_verbal,"[0.60,0.80)",26,0.7163818763066829,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_verbal,"[0.80,0.90)",12,0.8617735672413925,0.8333333333333334,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_verbal,"[0.90,0.95)",10,0.9232046764303472,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,mobile_robot_incl_pilot_seen,p_verbal,"[0.95,1.00]",50,0.9845755090301858,0.96,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_verbal,"[0.40,0.60)",5,0.4893853205816582,0.4,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_verbal,"[0.60,0.80)",34,0.7289742315429474,0.6764705882352942,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_verbal,"[0.80,0.90)",77,0.8574165985028428,0.974025974025974,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_verbal,"[0.90,0.95)",31,0.9232046764303475,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_incl_pilot_seen,p_verbal,"[0.95,1.00]",59,0.9845755090301856,0.9830508474576272,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_verbal,"[0.40,0.60)",6,0.5439681725053808,0.16666666666666666,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_verbal,"[0.60,0.80)",20,0.7118064802183794,0.65,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_verbal,"[0.80,0.90)",55,0.8588208326332356,0.9090909090909091,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_verbal,"[0.90,0.95)",19,0.9232046764303474,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,trustnav_complete_incl_pilot_seen,p_verbal,"[0.95,1.00]",106,0.9845755090301858,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.00,0.40)",0,,,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.40,0.60)",3,0.5605930404291183,0.6666666666666666,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.60,0.80)",46,0.722991550052707,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.80,0.90)",25,0.8622947378441677,0.92,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.90,0.95)",15,0.923204676430347,1.0,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory
+gpt-luna,new_domains_pooled_incl_pilot_seen,p_verbal,"[0.95,1.00]",111,0.9845755090301854,0.963963963963964,included (sensitivity analysis),gpt-6-luna,effort none,confirmatory

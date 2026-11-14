@@ -1,0 +1,74 @@
+# Precise object names for the kitchen scenes, applied by src/build_data.py to the objects_in_view of
+# EVERY kitchen scene (AmbiK clear and ambiguous items and the constructed infeasible items), so that one
+# object has one name in every scene and the narrowing words of the infeasible items are not a cue to
+# the condition. Keys are listed objects without their article ("a", "an"), compared case-insensitively;
+# the article of the scene's entry is kept and adjusted. Names are positive descriptions of the listed
+# object; none names a missing variant.
+# `skip`: item ids whose scene keeps the source name for that object, because the precise name would
+# change the item's label or resolve its intended ambiguity.
+# Every replacement is logged by the build in data/review/inventory_edits.csv (edit_kind: narrowing =
+# needed for an infeasible item's label, declared in its scene_edits; propagation = same name carried to
+# the scene).
+
+names:
+  greek yogurt cup: {new: plain unflavoured greek yogurt cup, why: "flavour of the listed yogurt made explicit"}
+  greek yogurt: {new: plain unflavoured Greek dairy yogurt, why: "flavour and dairy base of the listed yogurt made explicit"}
+  black tea: {new: plain black tea, why: "listed tea is unflavoured"}
+  green tea: {new: plain green tea, why: "listed tea is unflavoured"}
+  black tea bags: {new: plain black tea bags, why: "listed tea is unflavoured"}
+  green tea bags: {new: plain green tea bags, why: "listed tea is unflavoured"}
+  bottle of white wine: {new: bottle of still unfortified white wine, why: "listed wine is still and unfortified"}
+  bottle of red wine: {new: bottle of still unfortified red wine, why: "listed wine is still and unfortified"}
+  ceramic mug: {new: standard ceramic mug, why: "listed mug is an ordinary standard mug"}
+  glass mug: {new: standard glass mug, why: "listed mug is an ordinary standard mug"}
+  chocolate cake: {new: plain chocolate cake, why: "listed cake is a plain chocolate cake"}
+  vanilla cake: {new: plain vanilla cake, why: "listed cake is a plain vanilla cake"}
+  cinnamon sugar donut: {new: unfilled cinnamon sugar donut, why: "listed donut has no filling"}
+  coconut donut: {new: unfilled coconut donut, why: "listed donut has no filling"}
+  maple bar: {new: unfilled maple bar, why: "listed donut has no filling"}
+  strawberry frosted donut: {new: unfilled strawberry frosted donut, why: "listed donut has no filling"}
+  dark chocolate tablet: {new: plain unfilled dark chocolate tablet, why: "listed tablet is plain and unfilled"}
+  milk chocolate tablet: {new: plain unfilled milk chocolate tablet, why: "listed tablet is plain and unfilled"}
+  glass milk bottle: {new: glass bottle of cow's milk, why: "listed milk is cow's milk"}
+  milk: {new: cow's milk, why: "listed milk is cow's milk"}
+  # Other spellings of the same objects in the source lists:
+  cow's milk bottle: {new: bottle of cow's milk, why: "same object as a cow's milk bottle elsewhere; shared name"}
+  bottled milk: {new: bottle of cow's milk, why: "same object; shared name"}
+  bottle of milk: {new: bottle of cow's milk, why: "same object; shared name"}
+  red wine bottle: {new: bottle of still unfortified red wine, why: "same object; shared name"}
+  white wine bottle: {new: bottle of still unfortified white wine, why: "same object; shared name"}
+  sliced bread: {new: sliced white sandwich bread, why: "type of the listed bread made explicit"}
+  toasted bread: {new: toasted white bread, why: "type of the listed bread made explicit"}
+  uncut white bread: {new: uncut white sandwich bread leavened exclusively with commercial baker's yeast, why: "leavening of the listed loaf made explicit"}
+  sweet onion: {new: yellow sweet onion, why: "colour of the listed onion made explicit"}
+  basmati rice: {new: white basmati rice, why: "colour of the listed rice made explicit"}
+  jasmine rice: {new: white jasmine rice, why: "colour of the listed rice made explicit"}
+  brown rice: {new: long-grain brown rice, why: "grain of the listed rice made explicit"}
+  cookies: {new: plain butter cookies, why: "type of the listed cookies made explicit"}
+  digestive biscuits: {new: plain wheat digestive biscuits, why: "type of the listed biscuits made explicit"}
+  sugar cookies: {new: plain sugar cookies, why: "listed cookies are plain"}
+  granulated sugar: {new: white granulated sugar, why: "colour of the listed sugar made explicit"}
+  olive oil: {new: plain olive oil, why: "listed oil is plain"}
+  potato chips: {new: plain salted potato chips, why: "flavour of the listed chips made explicit"}
+  rice chips: {new: plain salted rice chips, why: "flavour of the listed chips made explicit"}
+  sea salt: {new: plain sea salt, why: "listed salt is plain"}
+
+# Keys: AmbiK pair id (both members share one scene) or infeasible item id.
+skip:
+  AK561: {objects: [jasmine rice, basmati rice], why: "the scene also lists 'a white rice'; 'white jasmine/basmati rice' would make the clear side's 'white rice' ambiguous"}
+  AK583: {objects: [jasmine rice, basmati rice], why: "the scene also lists 'a white rice'; 'white basmati rice' would make the clear side's 'white rice' ambiguous"}
+  AK619: {objects: [jasmine rice, basmati rice], why: "the scene also lists 'a white rice'; the clear side asks for white rice"}
+  AK624: {objects: [jasmine rice, basmati rice], why: "the scene also lists 'a white rice'; both sides ask for white rice"}
+  AK948: {objects: [jasmine rice, basmati rice], why: "the scene also lists 'a white rice'; both sides ask for white rice"}
+  AK995: {objects: [jasmine rice, basmati rice], why: "the scene also lists 'a white rice'; the clear side asks for white rice"}
+  AK53:  {objects: [glass milk bottle, milk], why: "ambiguity between the milk bottle and the oat milk bottle; 'cow's milk' would make 'milk' point to one of them"}
+  AK65:  {objects: [glass milk bottle, milk], why: "'milk from the bottle'; 'cow's milk' would narrow which bottle"}
+  AK129: {objects: [glass milk bottle, milk], why: "ambiguous side says '1 cup of milk' (milk or oat milk); 'cow's milk' would resolve it"}
+  AK134: {objects: [glass milk bottle, milk], why: "ambiguous side says 'a glass of milk' (milk or oat milk); 'cow's milk' would resolve it"}
+  AK208: {objects: [glass milk bottle, milk], why: "ambiguous side says 'milk', clear side 'oat milk'; 'cow's milk' would resolve it"}
+  AK227: {objects: [glass milk bottle, milk], why: "'a milk bottle' among two milk bottles; 'cow's milk' would narrow it"}
+  AK353: {objects: [glass milk bottle, milk], why: "ambiguous side says 'a glass of milk', clear side 'oat milk'; 'cow's milk' would resolve it"}
+  AK445: {objects: [glass milk bottle, milk], why: "ambiguous side says 'with milk', clear side 'oat milk'; 'cow's milk' would resolve it"}
+  AK276: {objects: [greek yogurt cup], why: "ambiguous side 'the yogurt' for a savoury olive spread; 'plain unflavoured' would point to the Greek yogurt"}
+  AK204: {objects: [greek yogurt cup], why: "ambiguous side 'a cup of yogurt' mixed with citrus zest; 'plain unflavoured' would point to the Greek yogurt"}
+  AK266: {objects: [greek yogurt cup], why: "ambiguous side '1 cup of yogurt' for a chocolate mousse; 'plain unflavoured' would point to the Greek yogurt"}

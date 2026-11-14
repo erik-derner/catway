@@ -1,0 +1,21 @@
+# Item sets, each read from data/processed/<name>.jsonl.
+# elicit.py runs every set below plus its `round_two` files unless --sets is given.
+# analyze.py analyses every set below (and finds <name>_r2.jsonl / <name>_cal_r2.jsonl itself).
+#
+# modified_condition_of: the set is the same items as the named set with a changed prompt. It is
+#   analysed and reported as its own set (its own rows in every table), compared with the named set
+#   item by item (matched by meta.variant_of) in trustnav_conditions<suffix>.csv, never pooled with
+#   it or with anything else, left out of the primary test and every Holm family, and its items are
+#   counted apart from the other sets in the item totals. Its plans are checked against the domain
+#   file of the named set.
+
+sets:
+  household:
+    round_two: [household_cal_r2, household_r2]
+  production_cell:
+    round_two: [production_cell_r2]
+  mobile_robot:
+    round_two: [mobile_robot_r2]
+  trustnav: {}                      # published TRUST-NAV prompts: the primary TRUST-NAV condition
+  trustnav_complete:                # TRUST-NAV with the completeness sentence of the new domains
+    modified_condition_of: trustnav # added at the end of the scene; reported separately

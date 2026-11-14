@@ -1,0 +1,12 @@
+# Python 3.12 (tested with 3.12.10)
+numpy==2.3.1
+pandas==2.3.1
+scipy==1.16.2
+scikit-learn==1.7.2
+PyYAML==6.0.3
+matplotlib==3.10.3
+pytest==9.0.2
+# for querying models (src/elicit.py) only
+httpx==0.28.1
+anthropic==0.86.0
+openai==2.3.0

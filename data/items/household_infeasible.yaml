@@ -1,0 +1,1564 @@
+# Household infeasible items: missing-object instructions (gold action: refuse), authored for this
+# benchmark. The instruction needs an object that the scene does not contain: an object of a kind that is
+# in view, in a variant that the scene does not list (src/build_data.py, kitchen_scene: for a kind of
+# object that is in view, the listed objects are the only ones).
+# Fields:
+#   ambik_id      the AmbiK row whose kitchen scene (environment list) the item uses; never a row of the
+#                 kept AmbiK clear/ambiguous pairs. The scene is read from AmbiK at build time.
+#   kind          the object kind; in_view: the listed objects of that kind (names as in the AmbiK list);
+#                 requested: the variant the instruction needs, which is not listed.
+#   scene_edits   listed objects whose precise name the label needs (a missing attribute is not proof of
+#                 absence), e.g. "a greek yogurt cup" -> "a plain unflavoured greek yogurt cup". The names
+#                 come from data/object_names.yaml, which the build applies to every kitchen scene; `new`
+#                 must equal that name (checked by the build).
+#   text          the instruction, written for this benchmark; or
+#   text_from_ambik  the instruction as edits of the row's own AmbiK unambiguous task (stripped of
+#                 surrounding whitespace): a list of [start, end, replacement] character spans, applied
+#                 by the build after AmbiK is downloaded (AmbiK states no licence, so its text is not
+#                 redistributed here). The build also stores that AmbiK task in meta.based_on.
+#   why           why the instruction cannot be carried out.
+#   replaces      this item takes the split of the listed item, which is not used.
+#   ok: false     the item is not used (note gives the reason); it still takes part in the grouping and
+#                 the split, so that every used item keeps its split.
+
+- id: IM1
+  ambik_id: 1
+  kind: bread
+  in_view: [sliced whole wheat bread, toasted bread]
+  scene_edits:
+  - {old: toasted bread, new: toasted white bread, reason: a generic bread listing could be the requested bread
+      type}
+  requested: pumpernickel bread
+  text: Toast two slices of the pumpernickel bread and put them on a plate next to the eggs.
+  why: no pumpernickel bread in view; listed bread objects are the only ones
+
+- id: IM2
+  ambik_id: 2
+  kind: mug
+  in_view: [beer mug, ceramic mug, glass mug]
+  scene_edits:
+  - {old: a ceramic mug, new: a standard ceramic mug, reason: an ordinary listed mug could be read as a travel mug;
+      material alone does not fix the mug design}
+  - {old: a glass mug, new: a standard glass mug, reason: as for the ceramic mug}
+  requested: travel mug
+  text: Rinse the travel mug under the tap and set it upside down on the counter to dry.
+  why: no travel mug in view; listed mug objects are the only ones
+
+- id: IM3
+  ambik_id: 3
+  kind: donut
+  in_view: [strawberry frosted donut, cinnamon sugar donut, coconut donut]
+  scene_edits:
+  - {old: a strawberry frosted donut, new: an unfilled strawberry frosted donut, reason: a listed donut could be
+      jam-filled; filling made explicit}
+  - {old: a cinnamon sugar donut, new: an unfilled cinnamon sugar donut, reason: as above}
+  - {old: a coconut donut, new: an unfilled coconut donut, reason: as above}
+  - {old: a maple bar, new: an unfilled maple bar, reason: as above (a maple bar is a donut)}
+  requested: jam-filled donut
+  text: Use the coffee machine to brew a pot of coffee, then put the jam-filled donut on the ceramic salad plate
+    and bring it to the kitchen table.
+  why: no jam-filled donut in view; listed donut objects are the only ones
+
+- id: IM5
+  ambik_id: 5
+  kind: yogurt
+  in_view: [greek yogurt cup, vanilla yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: peach yogurt cup
+  text: Take the peach yogurt cup, open it, and serve it in the ceramic bowl with a spoonful of couscous on the
+    side.
+  why: no peach yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM6
+  ambik_id: 6
+  kind: cheese
+  in_view: [mozzarella sticks, fresh mozzarella package, cheddar cheese slices, cottage cheese, cream cheese]
+  requested: Emmental cheese slices
+  text_from_ambik:
+  - [32, 39, Emmental]
+  why: no Emmental cheese slices in view; listed cheese objects are the only ones
+
+- id: IM7
+  ambik_id: 7
+  kind: pie
+  in_view: [cream pie, shepherd's pie, key lime pie, pumpkin pie, apple pie]
+  requested: cherry pie
+  text: Cut a slice of the cherry pie with the chef's knife and serve it in the ceramic bowl.
+  why: no cherry pie in view; listed pie objects are the only ones
+
+- id: IM8
+  ambik_id: 8
+  kind: yogurt
+  in_view: [strawberry yogurt cup, vanilla yogurt cup, greek yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: blueberry yogurt cup
+  text: Take the blueberry yogurt cup out of the fridge and put it on the kitchen table.
+  why: no blueberry yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM9
+  ambik_id: 9
+  kind: milk
+  in_view: [glass milk bottle, oat milk bottle]
+  scene_edits:
+  - {old: a glass milk bottle, new: a glass bottle of cow's milk, reason: a generic milk listing could be the requested
+      plant milk}
+  requested: almond milk
+  text: Pour the vanilla yogurt cup into the blender, add one cup of almond milk, and blend until smooth.
+  why: no almond milk in view; listed milk objects are the only ones
+
+- id: IM10
+  ambik_id: 10
+  kind: chocolate
+  in_view: [almond milk chocolate tablet, milk chocolate tablet]
+  requested: dark chocolate tablet
+  text: Melt the dark chocolate tablet in the ceramic bowl in the microwave, then dip slices of banana into it.
+  why: no dark chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM11
+  ambik_id: 11
+  kind: cheese
+  in_view: [cheddar cheese slices, cottage cheese, cream cheese, mozzarella sticks, fresh mozzarella package]
+  requested: Swiss cheese slices
+  text: Put two Swiss cheese slices on a ceramic dinner plate and add a handful of grapes beside them.
+  why: no Swiss cheese slices in view; listed cheese objects are the only ones
+
+- id: IM12
+  ambik_id: 12
+  kind: knife
+  in_view: [bread knife, paring knife, butter knife]
+  requested: steak knife
+  text: Wash the steak knife in the sink and lay it next to the cutting board.
+  why: no steak knife in view; listed knife objects are the only ones
+
+- id: IM13
+  ambik_id: 13
+  kind: rice
+  in_view: [jasmine rice, basmati rice]
+  scene_edits:
+  - {old: jasmine rice, new: white jasmine rice, reason: jasmine and basmati rice can be brown; colour made explicit}
+  - {old: basmati rice, new: white basmati rice, reason: as above}
+  requested: brown rice
+  text: Cook one cup of the brown rice in a saucepan with two cups of water until it is tender.
+  why: no brown rice in view; listed rice objects are the only ones
+
+- id: IM15
+  ambik_id: 15
+  kind: tea
+  in_view: [black tea bags, green tea bags]
+  requested: chamomile tea bags
+  text: Boil water in the kettle and make a cup of chamomile tea with one of the chamomile tea bags.
+  why: no chamomile tea bags in view; listed tea objects are the only ones
+
+- id: IM16
+  ambik_id: 16
+  kind: chocolate
+  in_view: [milk chocolate tablet, dark chocolate tablet, almond milk chocolate tablet]
+  scene_edits:
+  - {old: a milk chocolate tablet, new: a plain unfilled milk chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  - {old: a dark chocolate tablet, new: a plain unfilled dark chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  requested: hazelnut chocolate tablet
+  text: Break the hazelnut chocolate tablet in half and bring one half to me.
+  why: no hazelnut chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM17
+  ambik_id: 17
+  kind: teaspoon
+  in_view: [silver teaspoon]
+  requested: wooden teaspoon
+  text: Wash the wooden teaspoon and put it in the cutlery drawer.
+  why: no wooden teaspoon in view; listed teaspoon objects are the only ones
+
+- id: IM20
+  ambik_id: 20
+  kind: bowl
+  in_view: [metal bowl, plastic bowl, ceramic bowl]
+  requested: glass bowl
+  text_from_ambik:
+  - [44, 51, glass]
+  why: no glass bowl in view; listed bowl objects are the only ones
+
+- id: IM21
+  ambik_id: 21
+  kind: cake
+  in_view: [vanilla cake, ice cream cake, chocolate cake, strawberry cake]
+  requested: lemon cake
+  text: Use the bread knife to cut a slice of the lemon cake and serve it with a few raspberries.
+  why: no lemon cake in view; listed cake objects are the only ones
+
+- id: IM22
+  ambik_id: 22
+  kind: soda
+  in_view: [orange soda]
+  requested: lemon soda
+  text_from_ambik:
+  - [23, 32, lemon]
+  - [33, 36, soda]
+  why: no lemon soda in view; listed soda objects are the only ones
+
+- id: IM24
+  ambik_id: 24
+  kind: bread
+  in_view: [toasted bread, sliced whole wheat bread]
+  scene_edits:
+  - {old: toasted bread, new: toasted white bread, reason: a generic bread listing could be the requested bread
+      type}
+  requested: sliced rye bread
+  text_from_ambik:
+  - [33, 44, rye]
+  why: no sliced rye bread in view; listed bread objects are the only ones
+
+- id: IM25
+  ambik_id: 25
+  kind: bread
+  in_view: [uncut white bread, toasted bread]
+  scene_edits:
+  - {old: toasted bread, new: toasted white bread, reason: a generic bread listing could be the requested bread
+      type}
+  requested: multigrain bread
+  text: Toast two slices of the multigrain bread in the toaster, then fry an egg in the frying pan and put it on
+    top.
+  why: no multigrain bread in view; listed bread objects are the only ones
+
+- id: IM26
+  ambik_id: 26
+  kind: rice
+  in_view: [jasmine rice, brown rice, basmati rice]
+  requested: wild rice
+  text: Rinse a cup of the wild rice in the sink and cook it in a saucepan with three cups of water.
+  why: no wild rice in view; listed rice objects are the only ones
+
+- id: IM28
+  ambik_id: 28
+  kind: biscuit
+  in_view: [ginger biscuits, digestive biscuits]
+  scene_edits:
+  - {old: digestive biscuits, new: plain wheat digestive biscuits, reason: 'generic cookies or digestive biscuits
+      could be the requested biscuit (e.g. chocolate, oat or coconut)'}
+  - {old: cookies, new: plain butter cookies, reason: 'generic cookies or digestive biscuits could be the requested
+      biscuit (e.g. chocolate, oat or coconut)'}
+  requested: chocolate biscuits
+  text: Put four chocolate biscuits in the ceramic bowl and bring the bowl to the kitchen table.
+  why: no chocolate biscuits in view; listed biscuit objects are the only ones
+
+- id: IM29
+  ambik_id: 29
+  kind: wine
+  in_view: [bottle of white wine, bottle of red wine]
+  scene_edits:
+  - {old: a bottle of white wine, new: a bottle of still unfortified white wine, reason: the listed white and red
+      wine did not exclude sparkling or fortified wines such as Marsala}
+  - {old: a bottle of red wine, new: a bottle of still unfortified red wine, reason: the listed white and red wine
+      did not exclude sparkling or fortified wines such as Marsala}
+  requested: bottle of rosé wine
+  text: Open the bottle of rosé wine and fill the wine glass halfway.
+  why: no bottle of rosé wine in view; listed wine objects are the only ones
+
+- id: IM33
+  ambik_id: 33
+  kind: pie
+  in_view: [shepherd's pie, apple pie, key lime pie]
+  requested: chicken pot pie
+  text_from_ambik:
+  - [85, 95, chicken pot]
+  - [220, 316, hot.]
+  why: no chicken pot pie in view; listed pie objects are the only ones
+
+- id: IM36
+  ambik_id: 36
+  kind: yogurt
+  in_view: [Greek yogurt]
+  scene_edits:
+  - {old: Greek yogurt, new: plain unflavoured Greek dairy yogurt, reason: 'the listed Greek yogurt did not state
+      its flavour, so it could be the requested flavoured yogurt'}
+  requested: coconut yogurt
+  text_from_ambik:
+  - [141, 146, coconut]
+  why: no coconut yogurt in view; listed yogurt objects are the only ones
+
+- id: IM40
+  ambik_id: 40
+  kind: chocolate
+  in_view: [almond milk chocolate tablet, dark chocolate tablet, milk chocolate tablet]
+  scene_edits:
+  - {old: a dark chocolate tablet, new: a plain unfilled dark chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  - {old: a milk chocolate tablet, new: a plain unfilled milk chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  requested: caramel chocolate tablet
+  text_from_ambik:
+  - [31, 35, caramel]
+  why: no caramel chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM45
+  ambik_id: 45
+  kind: pie
+  in_view: [apple pie, key lime pie, cream pie, shepherd's pie, pumpkin pie]
+  requested: blueberry pie
+  text_from_ambik:
+  - [47, 52, blueberry]
+  why: no blueberry pie in view; listed pie objects are the only ones
+
+- id: IM49
+  ambik_id: 49
+  kind: pie
+  in_view: [cream pie, apple pie, key lime pie]
+  requested: peach pie
+  text: Cut a slice of the peach pie, put it in the small bowl and brew a cup of coffee to go with it.
+  why: no peach pie in view; listed pie objects are the only ones
+
+- id: IM51
+  ambik_id: 51
+  kind: cheese
+  in_view: [fresh mozzarella package, cheddar cheese slices, blue cheese, parmesan, cottage cheese, mozzarella sticks]
+  requested: Gruyère cheese
+  text_from_ambik:
+  - [17, 25, Gruyère]
+  - [41, 49, grater.]
+  why: no Gruyère cheese in view; listed cheese objects are the only ones
+
+- id: IM54
+  ambik_id: 54
+  kind: plate
+  in_view: [plastic dinner plate, plastic bread plate, plastic salad plate, ceramic dinner plate, ceramic bread
+      plate, ceramic salad plate, glass dinner plate, glass bread plate, glass salad plate]
+  requested: wooden dinner plate
+  text_from_ambik:
+  - [10, 17, wooden]
+  why: no wooden dinner plate in view; listed plate objects are the only ones
+
+- id: IM56
+  ambik_id: 56
+  kind: pie
+  in_view: [apple pie, pumpkin pie]
+  requested: rhubarb pie
+  text_from_ambik:
+  - [11, 16, rhubarb]
+  why: no rhubarb pie in view; listed pie objects are the only ones
+
+- id: IM57
+  ambik_id: 57
+  kind: chocolate
+  in_view: [milk chocolate tablet, almond milk chocolate tablet]
+  scene_edits:
+  - {old: a milk chocolate tablet, new: a plain unfilled milk chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  requested: praline chocolate tablet
+  text: Put the praline chocolate tablet in the fridge to chill for an hour.
+  why: no praline chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM58
+  ambik_id: 58
+  kind: plate
+  in_view: [plastic dinner plate, plastic bread plate, plastic salad plate, ceramic dinner plate, ceramic bread
+      plate, ceramic salad plate, glass dinner plate, glass bread plate, glass salad plate]
+  requested: bamboo salad plate
+  text_from_ambik:
+  - [88, 93, bamboo]
+  why: no bamboo salad plate in view; listed plate objects are the only ones
+
+- id: IM60
+  ambik_id: 60
+  kind: oil
+  in_view: [sunflower oil, coconut oil, olive oil]
+  requested: sesame oil
+  text_from_ambik:
+  - [136, 141, sesame]
+  why: no sesame oil in view; listed oil objects are the only ones
+
+- id: IM61
+  ambik_id: 61
+  kind: yogurt
+  in_view: [greek yogurt cup, vanilla yogurt cup, strawberry yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: cherry yogurt cup
+  text: Open the cherry yogurt cup, stir in a teaspoon of honey, and serve it on the kitchen table.
+  why: no cherry yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM62
+  ambik_id: 62
+  kind: chips
+  in_view: [potato chips, rice chips, jalapeno chips]
+  scene_edits:
+  - {old: potato chips, new: plain salted potato chips, reason: a generic chips listing could have the requested
+      flavour}
+  - {old: rice chips, new: plain salted rice chips, reason: a generic chips listing could have the requested flavour}
+  requested: barbecue chips
+  text: Pour the barbecue chips into the plastic bowl and put the bowl on the kitchen table.
+  why: no barbecue chips in view; listed chips objects are the only ones
+
+- id: IM63
+  ambik_id: 63
+  kind: tea
+  in_view: [black tea bags, green tea bags]
+  requested: peppermint tea bags
+  text: Make a mug of peppermint tea in the ceramic mug using one of the peppermint tea bags and hot water from
+    the kettle.
+  why: no peppermint tea bags in view; listed tea objects are the only ones
+
+- id: IM64
+  ambik_id: 64
+  kind: cake
+  in_view: [strawberry cake, chocolate cake, cheesecake]
+  requested: carrot cake
+  text_from_ambik:
+  - [13, 23, carrot]
+  why: no carrot cake in view; listed cake objects are the only ones
+
+- id: IM66
+  ambik_id: 66
+  kind: fork
+  in_view: [stainless steel dinner fork, stainless steel salad fork]
+  requested: stainless steel dessert fork
+  text_from_ambik:
+  - [82, 87, dessert]
+  why: no stainless steel dessert fork in view; listed fork objects are the only ones
+
+- id: IM68
+  ambik_id: 68
+  kind: bread
+  in_view: [uncut white bread, sliced whole wheat bread, toasted bread]
+  scene_edits:
+  - {old: toasted bread, new: toasted white bread, reason: a generic bread listing could be the requested bread
+      type}
+  requested: banana bread
+  text: Cut two slices of the banana bread and warm them in the frying pan for a minute on each side.
+  why: no banana bread in view; listed bread objects are the only ones
+
+- id: IM69
+  ambik_id: 69
+  kind: milk
+  in_view: [glass milk bottle, oat milk bottle]
+  scene_edits:
+  - {old: a glass milk bottle, new: a glass bottle of cow's milk, reason: a generic milk listing could be the requested
+      plant milk}
+  requested: soy milk
+  text: Pour a glass of soy milk and put it on the kitchen table next to the muesli.
+  why: no soy milk in view; listed milk objects are the only ones
+
+- id: IM70
+  ambik_id: 70
+  kind: tea
+  in_view: [black tea bags, green tea bags]
+  scene_edits:
+  - {old: black tea bags, new: plain black tea bags, reason: the listed black or green tea did not exclude flavoured
+      or scented tea}
+  - {old: green tea bags, new: plain green tea bags, reason: the listed black or green tea did not exclude flavoured
+      or scented tea}
+  requested: jasmine tea bag
+  text_from_ambik:
+  - [27, 32, jasmine]
+  - [45, 50, jasmine]
+  why: no jasmine tea bag in view; listed tea objects are the only ones
+
+- id: IM71
+  ambik_id: 71
+  kind: cheese
+  in_view: [cheddar cheese slices, blue cheese, fresh mozzarella package, mozzarella sticks]
+  requested: brie cheese
+  text: Slice the brie cheese thinly and lay it on a slice of the toasted bread.
+  why: no brie cheese in view; listed cheese objects are the only ones
+
+- id: IM72
+  ambik_id: 72
+  kind: donut
+  in_view: [strawberry frosted donut, cinnamon sugar donut, coconut donut]
+  requested: chocolate frosted donut
+  text: Put the chocolate frosted donut on a plate and bring it to me with a few strawberries.
+  why: no chocolate frosted donut in view; listed donut objects are the only ones
+
+- id: IM73
+  ambik_id: 73
+  kind: cheese
+  in_view: [cream cheese, fresh mozzarella package, cheddar cheese slices, mozzarella sticks]
+  requested: mascarpone cheese
+  text_from_ambik:
+  - [37, 42, mascarpone]
+  - [86, 98, mascarpone]
+  why: no mascarpone cheese in view; listed cheese objects are the only ones
+
+- id: IM74
+  ambik_id: 74
+  kind: wine
+  in_view: [bottle of white wine, bottle of red wine]
+  scene_edits:
+  - {old: a bottle of white wine, new: a bottle of still unfortified white wine, reason: the listed white and red
+      wine did not exclude sparkling or fortified wines such as Marsala}
+  - {old: a bottle of red wine, new: a bottle of still unfortified red wine, reason: the listed white and red wine
+      did not exclude sparkling or fortified wines such as Marsala}
+  requested: rice wine
+  text_from_ambik:
+  - [42, 47, rice]
+  why: no rice wine in view; listed wine objects are the only ones
+
+- id: IM75
+  ambik_id: 75
+  kind: cake
+  in_view: [ice cream cake, carrot cake, cheesecake, chocolate cake, strawberry cake]
+  requested: coffee cake
+  text: Take the coffee cake out of the fridge, cut it into eight slices and arrange them on a plate.
+  why: no coffee cake in view; listed cake objects are the only ones
+  ok: false
+  note: 'not used: ''coffee cake'' also means any cake served with coffee; no clean missing-variant test; replaced
+    by IM94'
+
+- id: IM76
+  ambik_id: 76
+  kind: yogurt
+  in_view: [strawberry yogurt cup, greek yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: lemon yogurt cup
+  text: Spoon the lemon yogurt into the ceramic bowl and top it with a teaspoon of mixed fruit jam.
+  why: no lemon yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM77
+  ambik_id: 77
+  kind: chocolate
+  in_view: [almond milk chocolate tablet, dark chocolate tablet]
+  requested: ruby chocolate tablet
+  text: Chop the ruby chocolate tablet into small pieces with the paring knife and put them in the metal bowl.
+  why: no ruby chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM79
+  ambik_id: 79
+  kind: yogurt
+  in_view: [greek yogurt cup, strawberry yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: vanilla yogurt cup
+  text: Bring me the vanilla yogurt cup and a spoon.
+  why: no vanilla yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM81
+  ambik_id: 81
+  kind: yogurt
+  in_view: [greek yogurt cup, vanilla yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: mango yogurt
+  text_from_ambik:
+  - [81, 88, mango]
+  why: no mango yogurt in view; listed yogurt objects are the only ones
+
+- id: IM82
+  ambik_id: 82
+  kind: biscuit
+  in_view: [ginger biscuits, digestive biscuits]
+  scene_edits:
+  - {old: digestive biscuits, new: plain wheat digestive biscuits, reason: 'generic cookies or digestive biscuits
+      could be the requested biscuit (e.g. chocolate, oat or coconut)'}
+  - {old: cookies, new: plain butter cookies, reason: 'generic cookies or digestive biscuits could be the requested
+      biscuit (e.g. chocolate, oat or coconut)'}
+  requested: oat biscuits
+  text_from_ambik:
+  - [48, 54, oat]
+  why: no oat biscuits in view; listed biscuit objects are the only ones
+
+- id: IM83
+  ambik_id: 83
+  kind: onion
+  in_view: [sweet onion, yellow onion]
+  scene_edits:
+  - {old: a sweet onion, new: a yellow sweet onion, reason: a sweet onion can be white; colour made explicit}
+  requested: white onion
+  text_from_ambik:
+  - [29, 34, white]
+  - [133, 137, sauté]
+  why: no white onion in view; listed onion objects are the only ones
+
+- id: IM86
+  ambik_id: 86
+  kind: plate
+  in_view: [plastic dinner plate, plastic bread plate, plastic salad plate, ceramic dinner plate, ceramic bread
+      plate, ceramic salad plate, glass dinner plate, glass bread plate, glass salad plate]
+  requested: paper salad plates
+  text_from_ambik:
+  - [10, 15, paper]
+  why: no paper salad plates in view; listed plate objects are the only ones
+
+- id: IM89
+  ambik_id: 89
+  kind: apple
+  in_view: [red apple, green apple]
+  requested: yellow apple
+  text: Wash the yellow apple, cut it into wedges and put them in a clean bowl.
+  why: no yellow apple in view; listed apple objects are the only ones
+
+- id: IM92
+  ambik_id: 92
+  kind: pizza
+  in_view: [frozen vegetable pizza, frozen mushroom pizza, frozen pepperoni pizza, frozen sausage pizza]
+  requested: frozen margherita pizza
+  text_from_ambik:
+  - [62, 71, margherita]
+  - [138, 143, 'sheet,']
+  - [144, 184, setting]
+  why: no frozen margherita pizza in view; listed pizza objects are the only ones
+
+- id: IM93
+  ambik_id: 93
+  kind: chips
+  in_view: [potato chips, jalapeno chips]
+  scene_edits:
+  - {old: potato chips, new: plain salted potato chips, reason: a generic chips listing could have the requested
+      flavour}
+  requested: salt and vinegar chips
+  text: Open the bag of salt and vinegar chips and pour half of it into a bowl for me.
+  why: no salt and vinegar chips in view; listed chips objects are the only ones
+
+- id: IM94
+  ambik_id: 94
+  kind: cheese
+  in_view: [cottage cheese, cheddar cheese slices]
+  requested: provolone cheese slices
+  text_from_ambik:
+  - [56, 63, provolone]
+  why: no provolone cheese slices in view; listed cheese objects are the only ones
+  replaces: IM75
+
+- id: IM95
+  ambik_id: 95
+  kind: bread
+  in_view: [sliced whole wheat bread, uncut white bread]
+  scene_edits:
+  - {old: uncut white bread, new: uncut white sandwich bread leavened exclusively with commercial baker's yeast,
+    reason: uncut white bread could be a white sourdough; bread type made explicit}
+  requested: uncut sourdough bread
+  text_from_ambik:
+  - [60, 65, sourdough]
+  why: no uncut sourdough bread in view; listed bread objects are the only ones
+
+- id: IM97
+  ambik_id: 97
+  kind: pie
+  in_view: [apple pie, shepherd's pie, key lime pie]
+  requested: pear pie
+  text_from_ambik:
+  - [0, 8, Put on]
+  - [24, 41, '']
+  - [50, 54, '']
+  - [58, 63, pear]
+  - [68, 72, out of]
+  why: no pear pie in view; listed pie objects are the only ones
+
+- id: IM100
+  ambik_id: 100
+  kind: oil
+  in_view: [sunflower oil, coconut oil, olive oil]
+  requested: walnut oil
+  text_from_ambik:
+  - [122, 131, walnut]
+  why: no walnut oil in view; listed oil objects are the only ones
+
+- id: IM101
+  ambik_id: 101
+  kind: chips
+  in_view: [potato chips, rice chips]
+  requested: tortilla chips
+  text: Serve a bowl of tortilla chips with the cottage cheese on the side as a dip.
+  why: no tortilla chips in view; listed chips objects are the only ones
+
+- id: IM102
+  ambik_id: 102
+  kind: sugar
+  in_view: [granulated sugar]
+  scene_edits:
+  - {old: granulated sugar, new: white granulated sugar, reason: granulated sugar did not state its colour}
+  requested: brown sugar
+  text: Spread butter on a slice of the toasted bread and sprinkle a teaspoon of brown sugar over it.
+  why: no brown sugar in view; listed sugar objects are the only ones
+
+- id: IM103
+  ambik_id: 103
+  kind: knife
+  in_view: [chef's knife, butter knife]
+  requested: bread knife
+  text: Wash the bread knife with dish soap, dry it, and put it back in the drawer.
+  why: no bread knife in view; listed knife objects are the only ones
+
+- id: IM104
+  ambik_id: 104
+  kind: cake
+  in_view: [strawberry cake, ice cream cake, chocolate cake, vanilla cake, cheesecake]
+  scene_edits:
+  - {old: a chocolate cake, new: a plain chocolate cake, reason: a red velvet cake is a kind of cocoa cake; the
+      listed chocolate cake made distinct}
+  requested: red velvet cake
+  text: Cut a slice of the red velvet cake and put it on a plate on the kitchen table.
+  why: no red velvet cake in view; listed cake objects are the only ones
+
+- id: IM108
+  ambik_id: 108
+  kind: pizza
+  in_view: [frozen vegetable pizza, frozen pepperoni pizza, frozen cheese pizza]
+  requested: frozen Hawaiian pizza
+  text: Use the oven to bake the frozen Hawaiian pizza according to the package instructions, then slice it into
+    six pieces.
+  why: no frozen Hawaiian pizza in view; listed pizza objects are the only ones
+
+- id: IM111
+  ambik_id: 111
+  kind: cup
+  in_view: [porcelain cup, plastic cup, paper cup]
+  requested: bamboo cup
+  text_from_ambik:
+  - [11, 20, bamboo]
+  why: no bamboo cup in view; listed cup objects are the only ones
+
+- id: IM112
+  ambik_id: 112
+  kind: cheese
+  in_view: [fresh mozzarella package, mozzarella sticks, cream cheese]
+  requested: goat cheese
+  text_from_ambik:
+  - [53, 58, goat]
+  why: no goat cheese in view; listed cheese objects are the only ones
+
+- id: IM113
+  ambik_id: 113
+  kind: bread
+  in_view: [toasted bread, uncut white bread]
+  scene_edits:
+  - {old: toasted bread, new: toasted white bread, reason: a generic bread listing could be the requested bread
+      type}
+  requested: cinnamon raisin bread
+  text: Toast two slices of the cinnamon raisin bread and serve them with the sliced peach.
+  why: no cinnamon raisin bread in view; listed bread objects are the only ones
+
+- id: IM116
+  ambik_id: 116
+  kind: rice
+  in_view: [brown rice]
+  requested: black rice
+  text: Use the shears to cut open the package of black rice, then cook one cup of it in the saucepan with two cups
+    of water.
+  why: no black rice in view; listed rice objects are the only ones
+
+- id: IM119
+  ambik_id: 119
+  kind: salt
+  in_view: [table salt, sea salt]
+  scene_edits:
+  - {old: sea salt, new: plain sea salt, reason: sea salt could be smoked; made explicit}
+  requested: smoked salt
+  text_from_ambik:
+  - [132, 135, smoked]
+  why: no smoked salt in view; listed salt objects are the only ones
+
+- id: IM120
+  ambik_id: 120
+  kind: yogurt
+  in_view: [vanilla yogurt cup, strawberry yogurt cup, greek yogurt cup]
+  scene_edits:
+  - {old: a greek yogurt cup, new: a plain unflavoured greek yogurt cup, reason: 'the listed Greek yogurt did not
+      state its flavour, so it could be the requested flavoured yogurt'}
+  requested: apricot yogurt cup
+  text: Slice the peach and the apple, mix them with the apricot yogurt in a bowl, and serve it.
+  why: no apricot yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM121
+  ambik_id: 121
+  kind: egg
+  in_view: [chicken eggs, goose eggs]
+  requested: quail eggs
+  text_from_ambik:
+  - [32, 39, quail]
+  why: no quail eggs in view; listed egg objects are the only ones
+
+- id: IM125
+  ambik_id: 125
+  kind: wine
+  in_view: [bottle of white wine, bottle of red wine]
+  scene_edits:
+  - {old: a bottle of white wine, new: a bottle of still unfortified white wine, reason: the listed white and red
+      wine did not exclude sparkling or fortified wines such as Marsala}
+  - {old: a bottle of red wine, new: a bottle of still unfortified red wine, reason: the listed white and red wine
+      did not exclude sparkling or fortified wines such as Marsala}
+  requested: bottle of Marsala wine
+  text_from_ambik:
+  - [121, 126, Marsala]
+  why: no bottle of Marsala wine in view; listed wine objects are the only ones
+
+- id: IM126
+  ambik_id: 126
+  kind: container
+  in_view: [plastic food storage container, glass food storage container]
+  requested: metal food storage container
+  text_from_ambik:
+  - [31, 38, metal]
+  why: no metal food storage container in view; listed container objects are the only ones
+
+- id: IM128
+  ambik_id: 128
+  kind: pie
+  in_view: [pumpkin pie, key lime pie, apple pie]
+  requested: sweet potato pie
+  text: Cut a slice of the sweet potato pie, put it on a plate and brew a cup of coffee with the coffee machine.
+  why: no sweet potato pie in view; listed pie objects are the only ones
+
+- id: IM132
+  ambik_id: 132
+  kind: onion
+  in_view: [yellow onion, green onion]
+  requested: red onion
+  text_from_ambik:
+  - [9, 15, red]
+  why: no red onion in view; listed onion objects are the only ones
+
+- id: IM135
+  ambik_id: 135
+  kind: cake
+  in_view: [cheesecake, carrot cake]
+  requested: walnut cake
+  text: Cut a slice of the walnut cake and drizzle a little honey over it.
+  why: no walnut cake in view; listed cake objects are the only ones
+
+- id: IM137
+  ambik_id: 137
+  kind: tea
+  in_view: [black tea bags, green tea bags]
+  requested: rooibos tea bags
+  text_from_ambik:
+  - [77, 82, rooibos]
+  why: no rooibos tea bags in view; listed tea objects are the only ones
+
+- id: IM141
+  ambik_id: 141
+  kind: pizza
+  in_view: [frozen sausage pizza, frozen mushroom pizza, frozen cheese pizza, frozen pepperoni pizza]
+  requested: frozen BBQ chicken pizza
+  text_from_ambik:
+  - [30, 36, BBQ chicken]
+  - [52, 59, 'freezer,']
+  - [211, 269, '']
+  why: no frozen BBQ chicken pizza in view; listed pizza objects are the only ones
+
+- id: IM147
+  ambik_id: 147
+  kind: nuggets
+  in_view: [chicken nuggets]
+  requested: veggie nuggets
+  text_from_ambik:
+  - [12, 19, veggie]
+  why: no veggie nuggets in view; listed nuggets objects are the only ones
+
+- id: IM148
+  ambik_id: 148
+  kind: tea
+  in_view: [black tea bags, green tea bags]
+  scene_edits:
+  - {old: black tea bags, new: plain black tea bags, reason: the listed black or green tea did not exclude flavoured
+      or scented tea}
+  - {old: green tea bags, new: plain green tea bags, reason: the listed black or green tea did not exclude flavoured
+      or scented tea}
+  requested: Earl Grey tea bags
+  text: Make a cup of Earl Grey tea with one of the Earl Grey tea bags and add a splash of milk from the glass milk
+    bottle.
+  why: no Earl Grey tea bags in view; listed tea objects are the only ones
+
+- id: IM149
+  ambik_id: 149
+  kind: glass
+  in_view: [cocktail glass, milkshake glass, collins glass]
+  requested: wine glass
+  text: Wash the wine glass by hand in the sink and dry it carefully.
+  why: no wine glass in view; listed glass objects are the only ones
+
+- id: IM150
+  ambik_id: 150
+  kind: cheese
+  in_view: [cottage cheese, mozzarella sticks]
+  requested: cheddar cheese
+  text_from_ambik:
+  - [86, 93, cheddar]
+  why: no cheddar cheese in view; listed cheese objects are the only ones
+
+- id: IM155
+  ambik_id: 155
+  kind: rice
+  in_view: [jasmine rice, basmati rice, brown rice]
+  scene_edits:
+  - {old: brown rice, new: long-grain brown rice, reason: generic brown rice could be a short-grain rice of the
+      requested type}
+  requested: arborio rice
+  text_from_ambik:
+  - [83, 90, arborio]
+  - [282, 316, Add]
+  - [326, 331, milk and]
+  - [355, 358, blend]
+  - [359, 491, with]
+  - [502, 527, '']
+  - [533, 597, 'creamy,']
+  - [657, 710, '']
+  why: no arborio rice in view; listed rice objects are the only ones
+
+- id: IM159
+  ambik_id: 159
+  kind: cake
+  in_view: [vanilla cake, ice cream cake, carrot cake, strawberry cake]
+  requested: banana cake
+  text_from_ambik:
+  - [44, 51, banana]
+  - [243, 423, '']
+  why: no banana cake in view; listed cake objects are the only ones
+
+- id: IM164
+  ambik_id: 164
+  kind: oil
+  in_view: [olive oil, sunflower oil, coconut oil]
+  scene_edits:
+  - {old: olive oil, new: plain olive oil, reason: truffle oil is usually olive oil flavoured with truffle; plain
+      made explicit}
+  requested: truffle oil
+  text_from_ambik:
+  - [17, 17, ' a knife from']
+  - [97, 102, truffle]
+  - [174, 373, '']
+  why: no truffle oil in view; listed oil objects are the only ones
+
+- id: IM166
+  ambik_id: 166
+  kind: cake
+  in_view: [vanilla cake, strawberry cake, chocolate cake, carrot cake]
+  requested: pineapple upside-down cake
+  text: Take the pineapple upside-down cake out of the fridge and leave it on the counter to warm up before dinner.
+  why: no pineapple upside-down cake in view; listed cake objects are the only ones
+
+- id: IM168
+  ambik_id: 168
+  kind: plate
+  in_view: [ceramic plate, metal plate]
+  requested: glass plate
+  text_from_ambik:
+  - [48, 55, glass]
+  why: no glass plate in view; listed plate objects are the only ones
+
+- id: IM170
+  ambik_id: 170
+  kind: chocolate
+  in_view: [milk chocolate tablet, dark chocolate tablet]
+  scene_edits:
+  - {old: a milk chocolate tablet, new: a plain unfilled milk chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  - {old: a dark chocolate tablet, new: a plain unfilled dark chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  requested: orange chocolate tablet
+  text_from_ambik:
+  - [82, 83, an]
+  - [84, 88, orange]
+  why: no orange chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM171
+  ambik_id: 171
+  kind: cheese
+  in_view: [mozzarella sticks, cheddar cheese slices, fresh mozzarella package, parmesan, blue cheese]
+  requested: feta cheese
+  text_from_ambik:
+  - [20, 24, feta]
+  why: no feta cheese in view; listed cheese objects are the only ones
+
+- id: IM175
+  ambik_id: 175
+  kind: tablespoon
+  in_view: [stainless steel tablespoon, wooden tablespoon]
+  requested: plastic tablespoon
+  text_from_ambik:
+  - [59, 74, plastic]
+  why: no plastic tablespoon in view; listed tablespoon objects are the only ones
+
+- id: IM183
+  ambik_id: 183
+  kind: tablespoon
+  in_view: [stainless steel tablespoon, wooden tablespoon]
+  requested: silver tablespoon
+  text_from_ambik:
+  - [13, 28, silver]
+  why: no silver tablespoon in view; listed tablespoon objects are the only ones
+
+- id: IM186
+  ambik_id: 186
+  kind: plate
+  in_view: [plastic dinner plate, plastic bread plate, plastic salad plate, ceramic dinner plate, ceramic bread
+      plate, ceramic salad plate, glass dinner plate, glass bread plate, glass salad plate]
+  requested: metal dinner plates
+  text_from_ambik:
+  - [10, 15, metal]
+  why: no metal dinner plates in view; listed plate objects are the only ones
+
+- id: IM189
+  ambik_id: 189
+  kind: biscuit
+  in_view: [ginger biscuits, digestive biscuits]
+  scene_edits:
+  - {old: digestive biscuits, new: plain wheat digestive biscuits, reason: 'generic cookies or digestive biscuits
+      could be the requested biscuit (e.g. chocolate, oat or coconut)'}
+  - {old: cookies, new: plain butter cookies, reason: 'generic cookies or digestive biscuits could be the requested
+      biscuit (e.g. chocolate, oat or coconut)'}
+  requested: coconut biscuits
+  text_from_ambik:
+  - [10, 16, coconut]
+  why: no coconut biscuits in view; listed biscuit objects are the only ones
+
+- id: IM197
+  ambik_id: 197
+  kind: cake
+  in_view: [vanilla cake, chocolate cake, cheesecake, carrot cake]
+  scene_edits:
+  - {old: a vanilla cake, new: a plain vanilla cake, reason: a marble cake combines vanilla and chocolate; the listed
+      cakes made single-flavoured}
+  - {old: a chocolate cake, new: a plain chocolate cake, reason: as above}
+  requested: marble cake
+  text: Cut the marble cake into eight slices and arrange them on the kitchen table for the picnic.
+  why: no marble cake in view; listed cake objects are the only ones
+
+- id: IM202
+  ambik_id: 202
+  kind: wine
+  in_view: [bottle of white wine, bottle of red wine]
+  scene_edits:
+  - {old: a bottle of white wine, new: a bottle of still unfortified white wine, reason: the listed white and red
+      wine did not exclude sparkling or fortified wines such as Marsala}
+  - {old: a bottle of red wine, new: a bottle of still unfortified red wine, reason: the listed white and red wine
+      did not exclude sparkling or fortified wines such as Marsala}
+  requested: bottle of sparkling wine
+  text_from_ambik:
+  - [41, 46, sparkling]
+  why: no bottle of sparkling wine in view; listed wine objects are the only ones
+
+- id: IM214
+  ambik_id: 214
+  kind: cheese
+  in_view: [cheddar cheese slices, mozzarella sticks, fresh mozzarella package, cottage cheese]
+  requested: gouda cheese slices
+  text_from_ambik:
+  - [30, 37, gouda]
+  why: no gouda cheese slices in view; listed cheese objects are the only ones
+
+- id: IM222
+  ambik_id: 222
+  kind: yogurt
+  in_view: [strawberry yogurt cup, vanilla yogurt cup]
+  requested: pineapple yogurt cup
+  text_from_ambik:
+  - [69, 79, pineapple]
+  why: no pineapple yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM248
+  ambik_id: 248
+  kind: plate
+  in_view: [white ceramic plate, wooden plate, metal plate]
+  requested: blue ceramic plate
+  text_from_ambik:
+  - [55, 60, blue]
+  why: no blue ceramic plate in view; listed plate objects are the only ones
+
+- id: IM252
+  ambik_id: 252
+  kind: oil
+  in_view: [olive oil, sesame oil, soybean oil]
+  requested: coconut oil
+  text_from_ambik:
+  - [106, 111, coconut]
+  - [210, 273, set.]
+  - [330, 416, '']
+  - [461, 496, '']
+  why: no coconut oil in view; listed oil objects are the only ones
+
+- id: IM258
+  ambik_id: 258
+  kind: chocolate
+  in_view: [milk chocolate tablet, dark chocolate tablet, almond milk chocolate tablet]
+  requested: white chocolate tablet
+  text_from_ambik:
+  - [10, 21, white]
+  why: no white chocolate tablet in view; listed chocolate objects are the only ones
+
+- id: IM271
+  ambik_id: 271
+  kind: pie
+  in_view: [pumpkin pie, apple pie, key lime pie, shepherd's pie]
+  requested: pecan pie
+  text_from_ambik:
+  - [59, 66, pecan]
+  why: no pecan pie in view; listed pie objects are the only ones
+
+- id: IM272
+  ambik_id: 272
+  kind: rice
+  in_view: [jasmine rice, brown rice, basmati rice]
+  scene_edits:
+  - {old: brown rice, new: long-grain brown rice, reason: generic brown rice could be the requested short-grain
+      sushi rice}
+  requested: sushi rice
+  text_from_ambik:
+  - [40, 45, sushi]
+  why: no sushi rice in view; listed rice objects are the only ones
+
+- id: IM283
+  ambik_id: 283
+  kind: chocolate
+  in_view: [dark chocolate tablet, milk chocolate tablet, almond milk chocolate tablet]
+  scene_edits:
+  - {old: a dark chocolate tablet, new: a plain unfilled dark chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  - {old: a milk chocolate tablet, new: a plain unfilled milk chocolate tablet, reason: 'the listed milk or dark
+      chocolate did not state that it is plain, so it could be the requested flavoured chocolate'}
+  requested: mint chocolate
+  text_from_ambik:
+  - [112, 116, mint]
+  why: no mint chocolate in view; listed chocolate objects are the only ones
+
+- id: IM286
+  ambik_id: 286
+  kind: donut
+  in_view: [coconut donut]
+  requested: cinnamon donut
+  text_from_ambik:
+  - [37, 42, cinnamon]
+  - [43, 46, donut]
+  why: no cinnamon donut in view; listed donut objects are the only ones
+
+- id: IM294
+  ambik_id: 294
+  kind: cup
+  in_view: [porcelain cup, plastic cup, paper cup]
+  requested: enamel cup
+  text_from_ambik:
+  - [72, 73, an]
+  - [74, 83, enamel]
+  why: no enamel cup in view; listed cup objects are the only ones
+
+- id: IM297
+  ambik_id: 297
+  kind: bowl
+  in_view: [metal bowl, plastic bowl, ceramic bowl]
+  requested: wooden bowl
+  text_from_ambik:
+  - [22, 27, wooden]
+  why: no wooden bowl in view; listed bowl objects are the only ones
+
+- id: IM315
+  ambik_id: 315
+  kind: mug
+  in_view: [beer mug, ceramic mug, glass mug]
+  requested: copper mug
+  text_from_ambik:
+  - [88, 95, copper]
+  why: no copper mug in view; listed mug objects are the only ones
+
+- id: IM316
+  ambik_id: 316
+  kind: yogurt
+  in_view: [vanilla yogurt cup, strawberry yogurt cup]
+  requested: raspberry yogurt cup
+  text_from_ambik:
+  - [105, 115, raspberry]
+  why: no raspberry yogurt cup in view; listed yogurt objects are the only ones
+
+- id: IM317
+  ambik_id: 317
+  kind: donut
+  in_view: [coconut donut, cinnamon sugar donut, strawberry frosted donut]
+  requested: Boston cream donut
+  text: Bring me the Boston cream donut on a plate, please.
+  why: no Boston cream donut in view; listed donut objects are the only ones
+
+- id: IM325
+  ambik_id: 325
+  kind: plate
+  in_view: [glass dinner plate]
+  requested: ceramic dinner plate
+  text_from_ambik:
+  - [76, 81, ceramic]
+  why: no ceramic dinner plate in view; listed plate objects are the only ones
+
+- id: IM503
+  ambik_id: 503
+  kind: juice
+  in_view: [cranberry juice, grape juice, orange juice, apple juice, lemon juice]
+  requested: pineapple juice
+  text: Pour a glass of pineapple juice and put it on the kitchen table.
+  why: no pineapple juice in view; listed juice objects are the only ones
+
+- id: IM510
+  ambik_id: 510
+  kind: cookie
+  in_view: [sugar cookies, oatmeal cookies]
+  requested: peanut butter cookies
+  text: Put three peanut butter cookies on a plate and warm them in the microwave for ten seconds.
+  why: no peanut butter cookies in view; listed cookie objects are the only ones
+
+- id: IM515
+  ambik_id: 515
+  kind: vinegar
+  in_view: [apple cider vinegar, balsamic vinegar, red wine vinegar]
+  requested: rice vinegar
+  text: Mix two tablespoons of rice vinegar with one tablespoon of soy sauce in a small bowl.
+  why: no rice vinegar in view; listed vinegar objects are the only ones
+
+- id: IM517
+  ambik_id: 517
+  kind: tea
+  in_view: [herbal tea]
+  requested: white tea
+  text_from_ambik:
+  - [17, 23, white]
+  why: no white tea in view; listed tea objects are the only ones
+
+- id: IM519
+  ambik_id: 519
+  kind: juice
+  in_view: [cranberry juice, orange juice, lemon juice]
+  requested: mango juice
+  text: Pour the mango juice into a tall glass, add two ice cubes and bring it to me.
+  why: no mango juice in view; listed juice objects are the only ones
+
+- id: IM536
+  ambik_id: 536
+  kind: dressing
+  in_view: [ranch dressing, caesar dressing, italian dressing]
+  requested: thousand island dressing
+  text: Put two tablespoons of thousand island dressing into a small bowl for dipping.
+  why: no thousand island dressing in view; listed dressing objects are the only ones
+
+- id: IM538
+  ambik_id: 538
+  kind: bread
+  in_view: [sliced bread, pita bread]
+  scene_edits:
+  - {old: a sliced bread, new: a sliced white sandwich bread, reason: a generic bread listing could be the requested
+      bread type}
+  requested: brioche bread
+  text: Spread nutella on a slice of the brioche bread and place it on a plate.
+  why: no brioche bread in view; listed bread objects are the only ones
+
+- id: IM547
+  ambik_id: 547
+  kind: tea
+  in_view: [green tea, green iced tea, herbal tea]
+  requested: oolong tea
+  text: Brew a cup of oolong tea with the tea kettle and serve it on the kitchen table.
+  why: no oolong tea in view; listed tea objects are the only ones
+
+- id: IM550
+  ambik_id: 550
+  kind: dressing
+  in_view: [ranch dressing, caesar dressing, italian dressing]
+  requested: honey mustard dressing
+  text: Drizzle the honey mustard dressing over a bowl of chopped lettuce and toss it gently.
+  why: no honey mustard dressing in view; listed dressing objects are the only ones
+
+- id: IM563
+  ambik_id: 563
+  kind: juice
+  in_view: [lemon juice, apple juice]
+  requested: carrot juice
+  text: Pour a small glass of carrot juice and bring it to me.
+  why: no carrot juice in view; listed juice objects are the only ones
+
+- id: IM566
+  ambik_id: 566
+  kind: broth
+  in_view: [beef broth, chicken broth]
+  requested: vegetable broth
+  text: Heat two cups of vegetable broth in a pot on the stove until it simmers.
+  why: no vegetable broth in view; listed broth objects are the only ones
+
+- id: IM571
+  ambik_id: 571
+  kind: sauce
+  in_view: [bbq sauce, hot sauce]
+  requested: teriyaki sauce
+  text: Open the can of beans, stir in two tablespoons of teriyaki sauce, and heat them in the pot on the stove.
+  why: no teriyaki sauce in view; listed sauce objects are the only ones
+
+- id: IM572
+  ambik_id: 572
+  kind: sauce
+  in_view: [bbq sauce, hot sauce]
+  requested: sweet and sour sauce
+  text_from_ambik:
+  - [68, 71, sweet and sour]
+  why: no sweet and sour sauce in view; listed sauce objects are the only ones
+
+- id: IM575
+  ambik_id: 575
+  kind: cookie
+  in_view: [chocolate chip cookies, sugar cookies]
+  scene_edits:
+  - {old: sugar cookies, new: plain sugar cookies, reason: plain sugar cookies made explicit so that they cannot
+      be the requested flavoured cookies}
+  requested: lemon cookies
+  text: Arrange the lemon cookies on a plate and put them on the kitchen table.
+  why: no lemon cookies in view; listed cookie objects are the only ones
+
+- id: IM577
+  ambik_id: 577
+  kind: cookie
+  in_view: [sugar cookies]
+  scene_edits:
+  - {old: sugar cookies, new: plain sugar cookies, reason: plain sugar cookies made explicit so that they cannot
+      be the requested flavoured cookies}
+  requested: almond cookies
+  text_from_ambik:
+  - [12, 17, almond]
+  why: no almond cookies in view; listed cookie objects are the only ones
+
+- id: IM582
+  ambik_id: 582
+  kind: vinegar
+  in_view: [apple cider vinegar, red wine vinegar]
+  requested: sherry vinegar
+  text: Whisk a tablespoon of sherry vinegar with three tablespoons of olive oil in a small bowl.
+  why: no sherry vinegar in view; listed vinegar objects are the only ones
+
+- id: IM584
+  ambik_id: 584
+  kind: chips
+  in_view: [tortilla chips, potato chips, rice chips]
+  requested: pita chips
+  text: Fill a small bowl with pita chips and set it next to the plate of oatmeal cookies.
+  why: no pita chips in view; listed chips objects are the only ones
+
+- id: IM588
+  ambik_id: 588
+  kind: cream
+  in_view: [whipped cream, heavy cream]
+  requested: clotted cream
+  text_from_ambik:
+  - [120, 127, clotted]
+  why: no clotted cream in view; listed cream objects are the only ones
+
+- id: IM590
+  ambik_id: 590
+  kind: chips
+  in_view: [tortilla chips, potato chips]
+  requested: plantain chips
+  text_from_ambik:
+  - [105, 111, plantain]
+  why: no plantain chips in view; listed chips objects are the only ones
+
+- id: IM595
+  ambik_id: 595
+  kind: sauce
+  in_view: [bbq sauce, soy sauce, hot sauce]
+  requested: oyster sauce
+  text_from_ambik:
+  - [37, 40, oyster]
+  why: no oyster sauce in view; listed sauce objects are the only ones
+
+- id: IM604
+  ambik_id: 604
+  kind: rice
+  in_view: [basmati rice, white rice]
+  requested: red rice
+  text_from_ambik:
+  - [9, 16, red]
+  why: no red rice in view; listed rice objects are the only ones
+
+- id: IM605
+  ambik_id: 605
+  kind: sauce
+  in_view: [bbq sauce, soy sauce]
+  requested: peanut sauce
+  text_from_ambik:
+  - [28, 31, peanut]
+  why: no peanut sauce in view; listed sauce objects are the only ones
+
+- id: IM606
+  ambik_id: 606
+  kind: sauce
+  in_view: [bbq sauce, soy sauce, hot sauce]
+  requested: Worcestershire sauce
+  text: Brush the beef steak with Worcestershire sauce and cook it in the oven.
+  why: no Worcestershire sauce in view; listed sauce objects are the only ones
+
+- id: IM610
+  ambik_id: 610
+  kind: cookie
+  in_view: [chocolate chip cookies, oatmeal cookies]
+  requested: shortbread cookies
+  text: Put six shortbread cookies on a plate and bring them to the kitchen table.
+  why: no shortbread cookies in view; listed cookie objects are the only ones
+
+- id: IM622
+  ambik_id: 622
+  kind: juice
+  in_view: [grape juice, orange juice]
+  requested: grapefruit juice
+  text: Pour a glass of grapefruit juice and serve it with a bowl of the tortilla chips.
+  why: no grapefruit juice in view; listed juice objects are the only ones
+
+- id: IM630
+  ambik_id: 630
+  kind: dressing
+  in_view: [ranch dressing, italian dressing]
+  requested: caesar dressing
+  text: Toss a bowl of chopped lettuce with two tablespoons of caesar dressing.
+  why: no caesar dressing in view; listed dressing objects are the only ones
+
+- id: IM646
+  ambik_id: 646
+  kind: vinegar
+  in_view: [red wine vinegar]
+  requested: white wine vinegar
+  text_from_ambik:
+  - [68, 71, white]
+  why: no white wine vinegar in view; listed vinegar objects are the only ones
+
+- id: IM647
+  ambik_id: 647
+  kind: oil
+  in_view: [olive oil]
+  requested: avocado oil
+  text_from_ambik:
+  - [84, 89, avocado]
+  - [90, 93, oil.]
+  why: no avocado oil in view; listed oil objects are the only ones
+
+- id: IM661
+  ambik_id: 661
+  kind: tea
+  in_view: [black tea, green tea]
+  scene_edits:
+  - {old: a black tea, new: a plain black tea, reason: the listed black or green tea did not exclude flavoured or
+      scented tea}
+  - {old: a green tea, new: a plain green tea, reason: the listed black or green tea did not exclude flavoured or
+      scented tea}
+  requested: ginger tea
+  text_from_ambik:
+  - [17, 22, ginger]
+  why: no ginger tea in view; listed tea objects are the only ones
+
+- id: IM704
+  ambik_id: 704
+  kind: baking dish
+  in_view: [glass baking dish, ceramic dish]
+  requested: cast-iron baking dish
+  text_from_ambik:
+  - [28, 33, the cast-iron]
+  why: no cast-iron baking dish in view; listed baking dish objects are the only ones
+
+- id: IM705
+  ambik_id: 705
+  kind: baking dish
+  in_view: [glass baking dish, ceramic dish]
+  requested: aluminium baking dish
+  text_from_ambik:
+  - [18, 19, an]
+  - [20, 25, aluminium]
+  why: no aluminium baking dish in view; listed baking dish objects are the only ones
+
+- id: IM709
+  ambik_id: 709
+  kind: bread
+  in_view: [whole wheat bread, garlic bread, sliced bread]
+  scene_edits:
+  - {old: a sliced bread, new: a sliced white sandwich bread, reason: a generic bread listing could be the requested
+      bread type}
+  requested: pumpkin bread
+  text_from_ambik:
+  - [8, 14, the pumpkin]
+  why: no pumpkin bread in view; listed bread objects are the only ones
+
+- id: IM727
+  ambik_id: 727
+  kind: vinegar
+  in_view: [apple cider vinegar, red wine vinegar]
+  requested: balsamic vinegar
+  text: Slice two tomatoes and drizzle a teaspoon of balsamic vinegar over them.
+  why: no balsamic vinegar in view; listed vinegar objects are the only ones
+
+- id: IM781
+  ambik_id: 781
+  kind: milk
+  in_view: [milk, almond milk]
+  scene_edits:
+  - {old: a milk, new: a cow's milk, reason: a generic milk listing could be the requested plant milk}
+  requested: coconut milk
+  text_from_ambik:
+  - [141, 147, coconut]
+  why: no coconut milk in view; listed milk objects are the only ones
+
+- id: IM808
+  ambik_id: 808
+  kind: pepper
+  in_view: [red bell pepper]
+  requested: yellow bell pepper
+  text_from_ambik:
+  - [79, 82, yellow]
+  why: no yellow bell pepper in view; listed pepper objects are the only ones
+
+- id: IM811
+  ambik_id: 811
+  kind: sauce
+  in_view: [bbq sauce, tomato sauce, hot sauce]
+  requested: alfredo sauce
+  text_from_ambik:
+  - [61, 67, alfredo]
+  why: no alfredo sauce in view; listed sauce objects are the only ones
+
+- id: IM828
+  ambik_id: 828
+  kind: chips
+  in_view: [tortilla chips, potato chips, chocolate chips, rice chips]
+  requested: butterscotch chips
+  text_from_ambik:
+  - [60, 69, butterscotch]
+  - [79, 82, top.]
+  why: no butterscotch chips in view; listed chips objects are the only ones
+  ok: false
+  note: 'not used: butterscotch chips cannot be made demonstrably absent without an exclusion tailored to the requested
+    variant; replaced by IM821'
+
+- id: IM840
+  ambik_id: 840
+  kind: hummus
+  in_view: [spicy hummus]
+  requested: garlic hummus
+  text_from_ambik:
+  - [60, 65, garlic]
+  why: no garlic hummus in view; listed hummus objects are the only ones
+  ok: false
+  note: 'not used: spicy hummus may also contain garlic; narrowing its name does not establish that garlic hummus
+    is absent; replaced by IM929'
+
+- id: IM897
+  ambik_id: 897
+  kind: oil
+  in_view: [olive oil, sesame oil]
+  requested: chili oil
+  text_from_ambik:
+  - [102, 108, chili]
+  why: no chili oil in view; listed oil objects are the only ones
+
+- id: IM929
+  ambik_id: 929
+  kind: cheese
+  in_view: [feta cheese, ricotta cheese, goat cheese, mozzarella cheese]
+  requested: parmesan cheese
+  text_from_ambik:
+  - [51, 61, parmesan]
+  why: no parmesan cheese in view; listed cheese objects are the only ones
+  replaces: IM840
+
+- id: IM821
+  ambik_id: 821
+  kind: pepper
+  in_view: [red bell pepper]
+  requested: green bell pepper
+  text_from_ambik:
+  - [64, 67, green]
+  why: no green bell pepper in view; listed pepper objects are the only ones
+  replaces: IM828
