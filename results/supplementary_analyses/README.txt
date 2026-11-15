@@ -1,4 +1,4 @@
-SUPPLEMENTARY ANALYSES (Supplementary Tables S21-S27; exploratory) - tables written by src/supplementary_analyses.py
+SUPPLEMENTARY ANALYSES (Supplementary Tables S20-S27; exploratory) - tables written by src/supplementary_analyses.py
 Produced by: python src/supplementary_analyses.py --raw results/answers --boot 2000 --seed 20261115
 Deterministic: cluster bootstrap analyze.N_BOOT=10000 seed 0 for every paired interval; exact sign-flip p; pseudo-count bootstrap B=2000, numpy default_rng(20261115).
 Validation against the stored pipeline tables: 134 of 134 checks pass (validation.csv).

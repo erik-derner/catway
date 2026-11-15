@@ -1,7 +1,7 @@
-# CATWAY: Cost-sensitive three-way decisions with calibrated confidence for language-model robot agents
+# CATWAY: Cost-sensitive agentic three-way robot decisions with calibrated language-model confidence
 
-Code, data, model answers and result tables for the paper *CATWAY: Cost-sensitive three-way decisions
-with calibrated confidence for language-model robot agents*. A robot agent driven by a language model
+Code, data, model answers and result tables for the paper *CATWAY: Cost-sensitive agentic three-way robot
+decisions with calibrated language-model confidence*. A robot agent driven by a language model
 must decide whether to execute an instruction, ask a clarifying question or refuse. CATWAY is a
 cost-sensitive three-way decision gate: a loss matrix over four instruction conditions (clear, ambiguous,
 infeasible, unsafe) fixes execute, ask and refuse regions on the probability simplex, with the clarifying
@@ -25,7 +25,7 @@ src/
   analyze.py            gates and baselines, calibration, statistics, transfer analyses (tables)
   method_study.py       the 120 gate variants, their selection on calibration data, ablations (tables)
   vote_by_source.py     vote statistics per source and condition on the calibration split
-  supplementary_analyses.py   supplementary analyses (Supplementary Tables S21-S27; tables)
+  supplementary_analyses.py   supplementary analyses (Supplementary Tables S20-S27; tables)
 paper/                  scripts for the figures and the LaTeX tables of the paper (output in paper/output/)
 config/                 models, loss matrices, item sets, analysed configurations, excluded items
 data/
@@ -39,7 +39,7 @@ results/
   tables_test_six_configs/           test-set tables (analyze.py --unblind)
   tables_calibration_six_configs/    calibration-split tables (cross-validated) and vote statistics
   tables_method_study/               variants, selection, test comparisons, ablations (README.txt there)
-  supplementary_analyses/            supplementary analyses, Supplementary Tables S21-S27 (README.txt there)
+  supplementary_analyses/            supplementary analyses, Supplementary Tables S20-S27 (README.txt there)
 tests/                  test suite (python -m pytest)
 licenses/               licences of the redistributed third-party data
 ```
@@ -98,7 +98,7 @@ the vote-only gate with the direct prompt and the unguarded agent stay outside t
 python src/supplementary_analyses.py    # optional: --raw DIR [--raw DIR ...] --out DIR --boot 2000 --seed 20261115 --skip-selection
 ```
 
-This reproduces Supplementary Tables S21-S27. It needs the built items (`data/processed/household.jsonl`,
+This reproduces Supplementary Tables S20-S27. It needs the built items (`data/processed/household.jsonl`,
 see "Rebuild the benchmark") and the stored answers in `results/answers/`; no model is queried. The
 module re-implements no decision: CATWAY, CATWAY-Lite and the vote-only gate are decided by
 `method_study.run_variant` (fitted on the household calibration split and frozen), and the baselines by
@@ -185,7 +185,7 @@ own licences (previous section).
 ```
 @unpublished{derner_catway,
   author = {Erik Derner},
-  title  = {{CATWAY}: Cost-sensitive three-way decisions with calibrated confidence for language-model robot agents},
+  title  = {{CATWAY}: Cost-sensitive agentic three-way robot decisions with calibrated language-model confidence},
   note   = {Manuscript under review},
   year   = {2026}
 }

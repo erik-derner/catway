@@ -1,4 +1,4 @@
-"""Supplementary analyses (Supplementary Tables S21-S27; exploratory, added after the main analyses).
+"""Supplementary analyses (Supplementary Tables S20-S27; exploratory, added after the main analyses).
 No model calls: every number is recomputed from the stored answers with the functions of analyze.py,
 method_study.py and build_data.py.
 
@@ -1024,7 +1024,7 @@ def _rel(path):
 
 
 def readme(out, raw, args, secs, chk):
-    lines = ["SUPPLEMENTARY ANALYSES (Supplementary Tables S21-S27; exploratory) - tables written by "
+    lines = ["SUPPLEMENTARY ANALYSES (Supplementary Tables S20-S27; exploratory) - tables written by "
              "src/supplementary_analyses.py",
              "Produced by: python src/supplementary_analyses.py " + " ".join(f"--raw {_rel(r)}" for r in raw)
              + f" --boot {args.boot} --seed {args.seed}" + (" --skip-selection" if args.skip_selection else ""),
