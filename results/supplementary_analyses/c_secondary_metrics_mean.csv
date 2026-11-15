@@ -1,0 +1,37 @@
+status,policy,name,set,ask_rate,clear_executed,cost
+supplementary analyses (exploratory): recomputed from the stored answers,F_vote_scores|R_myopic|A_none,CATWAY,household_test,0.29402872260015117,0.7185792349726775,0.2773998488284202
+supplementary analyses (exploratory): recomputed from the stored answers,F_vote_scores|R_myopic|A_none,CATWAY,new_domains_pooled,0.26519337016574585,0.9263565891472868,0.05156537753222836
+supplementary analyses (exploratory): recomputed from the stored answers,F_vote_scores|R_myopic|A_none,CATWAY,trustnav,0.3063973063973064,0.7728937728937729,0.11952861952861954
+supplementary analyses (exploratory): recomputed from the stored answers,F_verbal_scores|R_myopic|A_none,CATWAY-Lite,household_test,0.30120937263794406,0.7131147540983607,0.3246409674981104
+supplementary analyses (exploratory): recomputed from the stored answers,F_verbal_scores|R_myopic|A_none,CATWAY-Lite,new_domains_pooled,0.27255985267034993,0.9108527131782945,0.072744014732965
+supplementary analyses (exploratory): recomputed from the stored answers,F_verbal_scores|R_myopic|A_none,CATWAY-Lite,trustnav,0.3063973063973064,0.7783882783882784,0.12626262626262627
+supplementary analyses (exploratory): recomputed from the stored answers,E_vote|R_myopic|A_none,vote-only gate,household_test,0.34958427815570675,0.5428051001821493,0.372260015117158
+supplementary analyses (exploratory): recomputed from the stored answers,E_vote|R_myopic|A_none,vote-only gate,new_domains_pooled,0.3416206261510129,0.6124031007751938,0.11694290976058931
+supplementary analyses (exploratory): recomputed from the stored answers,E_vote|R_myopic|A_none,vote-only gate,trustnav,0.4183501683501684,0.5183150183150184,0.24158249158249157
+supplementary analyses (exploratory): recomputed from the stored answers,P4_conformal,conformal set rule,household_test,0.18783068783068782,0.8588342440801457,0.39871504157218446
+supplementary analyses (exploratory): recomputed from the stored answers,P4_conformal,conformal set rule,new_domains_pooled,0.2541436464088398,0.9651162790697674,0.053406998158379376
+supplementary analyses (exploratory): recomputed from the stored answers,P4_conformal,conformal set rule,trustnav,0.28535353535353536,0.8113553113553112,0.10521885521885521
+supplementary analyses (exploratory): recomputed from the stored answers,P4b_chow_threshold,top-probability threshold,household_test,0.2343159486016629,0.8032786885245903,0.3669690098261527
+supplementary analyses (exploratory): recomputed from the stored answers,P4b_chow_threshold,top-probability threshold,new_domains_pooled,0.27808471454880296,0.9108527131782945,0.07734806629834254
+supplementary analyses (exploratory): recomputed from the stored answers,P4b_chow_threshold,top-probability threshold,trustnav,0.29713804713804715,0.7912087912087912,0.117003367003367
+supplementary analyses (exploratory): recomputed from the stored answers,P6_fuzzy,fuzzy rule base,household_test,0.28835978835978837,0.7076502732240436,0.3820861678004535
+supplementary analyses (exploratory): recomputed from the stored answers,P6_fuzzy,fuzzy rule base,new_domains_pooled,0.22191528545119707,0.9496124031007751,0.1832412523020258
+supplementary analyses (exploratory): recomputed from the stored answers,P6_fuzzy,fuzzy rule base,trustnav,0.27946127946127947,0.8351648351648352,0.117003367003367
+supplementary analyses (exploratory): recomputed from the stored answers,P2_cascade,rule cascade,household_test,0.2218442932728647,0.7823315118397085,0.47732426303854875
+supplementary analyses (exploratory): recomputed from the stored answers,P2_cascade,rule cascade,new_domains_pooled,0.1850828729281768,0.9689922480620154,0.3968692449355433
+supplementary analyses (exploratory): recomputed from the stored answers,P2_cascade,rule cascade,trustnav,0.2483164983164983,0.7838827838827839,0.31313131313131315
+supplementary analyses (exploratory): recomputed from the stored answers,P3r_trustnav_runner_config,TRUST-NAV gate,household_test,0.272108843537415,0.8224043715846995,0.6009070294784581
+supplementary analyses (exploratory): recomputed from the stored answers,P3r_trustnav_runner_config,TRUST-NAV gate,new_domains_pooled,0.28084714548802947,0.9806201550387597,0.1712707182320442
+supplementary analyses (exploratory): recomputed from the stored answers,P3r_trustnav_runner_config,TRUST-NAV gate,trustnav,0.3493265993265993,0.8937728937728938,0.19276094276094277
+supplementary analyses (exploratory): recomputed from the stored answers,P1_direct_prompt,direct prompt,household_test,0.2252456538170824,0.9171220400728597,0.8269085411942555
+supplementary analyses (exploratory): recomputed from the stored answers,P1_direct_prompt,direct prompt,new_domains_pooled,0.26427255985267034,0.9806201550387597,0.30755064456721914
+supplementary analyses (exploratory): recomputed from the stored answers,P1_direct_prompt,direct prompt,trustnav,0.5580808080808081,0.8809523809523809,0.40151515151515155
+supplementary analyses (exploratory): recomputed from the stored answers,P1c_direct_prompt_with_costs,cost-aware prompt,household_test,0.18027210884353742,0.9143897996357012,0.5729402872260015
+supplementary analyses (exploratory): recomputed from the stored answers,P1c_direct_prompt_with_costs,cost-aware prompt,new_domains_pooled,0.27900552486187846,0.9728682170542635,0.1731123388581952
+supplementary analyses (exploratory): recomputed from the stored answers,P1c_direct_prompt_with_costs,cost-aware prompt,trustnav,0.34175084175084175,0.8644688644688645,0.18686868686868685
+supplementary analyses (exploratory): recomputed from the stored answers,P8_unguarded_agent,unguarded agent,household_test,0.16628873771730915,0.8970856102003643,0.8155706727135299
+supplementary analyses (exploratory): recomputed from the stored answers,P8_unguarded_agent,unguarded agent,new_domains_pooled,0.21086556169429096,0.9728682170542635,0.363720073664825
+supplementary analyses (exploratory): recomputed from the stored answers,P8_unguarded_agent,unguarded agent,trustnav,0.3341750841750842,0.9047619047619048,0.2920875420875421
+supplementary analyses (exploratory): recomputed from the stored answers,P9_agent_plus_checker,agent with checker,household_test,0.16628873771730915,0.8888888888888888,0.8284202569916855
+supplementary analyses (exploratory): recomputed from the stored answers,P9_agent_plus_checker,agent with checker,new_domains_pooled,0.21086556169429096,0.9728682170542635,0.363720073664825
+supplementary analyses (exploratory): recomputed from the stored answers,P9_agent_plus_checker,agent with checker,trustnav,0.3341750841750842,0.9047619047619048,0.2920875420875421

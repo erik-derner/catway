@@ -1,0 +1,8 @@
+status,n_configurations_above_boundary,share_of_resamples,expected_number,B,seed,note
+supplementary analyses (exploratory): recomputed from the stored answers,0,0.0265,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations
+supplementary analyses (exploratory): recomputed from the stored answers,1,0.368,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations
+supplementary analyses (exploratory): recomputed from the stored answers,2,0.293,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations
+supplementary analyses (exploratory): recomputed from the stored answers,3,0.3125,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations
+supplementary analyses (exploratory): recomputed from the stored answers,4,0.0,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations
+supplementary analyses (exploratory): recomputed from the stored answers,5,0.0,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations
+supplementary analyses (exploratory): recomputed from the stored answers,6,0.0,1.8915,2000,20261115,joint cluster bootstrap: the same resampled calibration groups for all six configurations

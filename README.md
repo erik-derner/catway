@@ -1,13 +1,18 @@
-# CATWAY: execute, ask or refuse
+# CATWAY: Cost-sensitive three-way decisions with calibrated confidence for language-model robot agents
 
-Code, data, model answers and result tables for the paper *CATWAY: Calibrated three-way decisions for
-language-model robot agents that execute, ask or refuse*. CATWAY is a cost-sensitive three-way decision
-gate: it executes, asks or refuses by the minimum-expected-loss rule on a confidence estimate fused, by
-logistic regression, from a vote over ten sampled answers and three graded scores; CATWAY-Lite replaces
-the vote by one stated probability vector. The repository contains the benchmark (household instructions
-built from public sources, two authored robot domains and the external TRUST-NAV set), the code that
-queries the models, all stored model answers, and the analysis that produces every table and figure of
-the paper from them.
+Code, data, model answers and result tables for the paper *CATWAY: Cost-sensitive three-way decisions
+with calibrated confidence for language-model robot agents*. A robot agent driven by a language model
+must decide whether to execute an instruction, ask a clarifying question or refuse. CATWAY is a
+cost-sensitive three-way decision gate: a loss matrix over four instruction conditions (clear, ambiguous,
+infeasible, unsafe) fixes execute, ask and refuse regions on the probability simplex, with the clarifying
+question as the information-gathering step, and the gate acts by the minimum-expected-loss rule. The
+probabilities come from a logistic fusion of a vote over ten sampled answers with three graded scores of
+ambiguity, infeasibility and risk; CATWAY-Lite replaces the vote by one stated probability vector. The
+gate is fitted on household instructions, frozen, and tested in-domain, in two new robot domains and on
+an external benchmark, against prompted, agent and fitted baselines. The repository contains the
+benchmark (household instructions built from public sources, two authored robot domains and the
+external TRUST-NAV set), the code that queries the models, all stored model answers, and the analysis
+that produces every table and figure of the paper and its supplement from them.
 
 ## Layout
 
@@ -20,6 +25,7 @@ src/
   analyze.py            gates and baselines, calibration, statistics, transfer analyses (tables)
   method_study.py       the 120 gate variants, their selection on calibration data, ablations (tables)
   vote_by_source.py     vote statistics per source and condition on the calibration split
+  supplementary_analyses.py   supplementary analyses (Supplementary Tables S21-S27; tables)
 paper/                  scripts for the figures and the LaTeX tables of the paper (output in paper/output/)
 config/                 models, loss matrices, item sets, analysed configurations, excluded items
 data/
@@ -33,6 +39,7 @@ results/
   tables_test_six_configs/           test-set tables (analyze.py --unblind)
   tables_calibration_six_configs/    calibration-split tables (cross-validated) and vote statistics
   tables_method_study/               variants, selection, test comparisons, ablations (README.txt there)
+  supplementary_analyses/            supplementary analyses, Supplementary Tables S21-S27 (README.txt there)
 tests/                  test suite (python -m pytest)
 licenses/               licences of the redistributed third-party data
 ```
@@ -67,12 +74,14 @@ python src/analyze.py --unblind --allow-missing-round2 --raw results/answers --t
 python src/analyze.py --calibration-only --allow-missing-round2 --raw results/answers --tables results/tables_calibration_six_configs
 python src/vote_by_source.py --raw results/answers --out results/tables_calibration_six_configs/vote_by_source_condition_calibration.csv
 python src/method_study.py
+python src/supplementary_analyses.py    # results/supplementary_analyses/ (next section)
 python paper/make_figures.py            # Figures 3 to 6 and S1 -> paper/output/
 python paper/make_tables.py             # LaTeX rows of the result tables of the main text (printed)
 python paper/make_supplement_tables.py  # tables of Supplementary S3 -> paper/output/supp_tables.tex
 ```
 
-The first command takes about an hour, the method study about 7 minutes, the others a few minutes.
+The first command takes about an hour, the method study about 7 minutes, the supplementary analyses
+about 5 minutes, the others a few minutes.
 All resampling uses fixed seeds. `--allow-missing-round2` is needed for Gemma with reasoning, many of
 whose clarification-round plans were cut off at the output limit; the affected episode-cost rows (its
 unguarded agent and agent with checker on every set with a clarification round, and the uncalibrated
@@ -82,6 +91,31 @@ The six configurations are evaluated on every set. `config/analysis.yaml` gives 
 the role `descriptive`: it is analysed and tabulated like the other five, and only its comparisons of
 the vote-only gate with the direct prompt and the unguarded agent stay outside the Holm family of ten
 (`primary_test.csv`) and are reported unadjusted (`primary_comparisons_descriptive.csv`).
+
+## Supplementary analyses
+
+```
+python src/supplementary_analyses.py    # optional: --raw DIR [--raw DIR ...] --out DIR --boot 2000 --seed 20261115 --skip-selection
+```
+
+This reproduces Supplementary Tables S21-S27. It needs the built items (`data/processed/household.jsonl`,
+see "Rebuild the benchmark") and the stored answers in `results/answers/`; no model is queried. The
+module re-implements no decision: CATWAY, CATWAY-Lite and the vote-only gate are decided by
+`method_study.run_variant` (fitted on the household calibration split and frozen), and the baselines by
+the functions of `analyze.py`, with the paper's intervals (cluster bootstrap, 10,000 resamples, seed 0),
+exact sign-flip tests and Holm adjustment. The analyses are exploratory and were added after the main
+analyses; every row carries a `status` column saying so.
+
+It writes `results/supplementary_analyses/`: CATWAY against the fitted gates and its identity with
+`P7_learned`; the vote under other decision rules; comparisons per single new domain and on TRUST-NAV
+under several Holm families; a bootstrap of the fitted pseudo-count; unsafe executions per configuration
+with upper bounds; costs, comparison directions and re-selection of the gate under every alternative
+loss matrix; a decomposition of the household-to-new-domain cost change into class mix and behaviour;
+calibration metrics; secondary metrics (ask rate, share of clear instructions executed) of every gate
+and baseline; and smaller checks. `key_numbers.csv` lists each quoted number with the file and column it
+comes from, `validation.csv` compares the recomputed values with the stored tables of
+`results/tables_test_six_configs/` and `results/tables_method_study/` (all checks must pass), and
+`README.txt` describes every file. The run is deterministic; afterwards `git status` shows no change.
 
 ## Query a model
 
@@ -122,7 +156,7 @@ hash differs from the prompt the current code renders. Analyse with `--raw resul
 | decision rules, adaptations | `R_myopic` (minimum expected loss), `R_sequential`, `R_conformal`, `R_riskcap`; `A_none`, `A_em`, `A_agreement` |
 | vote, stated probabilities, token probabilities | `p_sample` (probe `cls_sample`), `p_verbal` (`verbal`), `p_logit` (`cls_logprob`) |
 | graded scores, yes/no questions | probes `scores`; `bin_unsafe`, `bin_infeasible`, `bin_ambiguous` |
-| Haiku-R, Haiku, Luna-R, Luna, Gemma, Gemma-R | `claude-haiku`, `claude-haiku-nothink`, `gpt-luna-think`, `gpt-luna`, `gemma`, `gemma-think` |
+| Haiku-R, Haiku-N, Luna-R, Luna-N, Gemma-N, Gemma-R | `claude-haiku`, `claude-haiku-nothink`, `gpt-luna-think`, `gpt-luna`, `gemma`, `gemma-think` |
 | household calibration split (cross-validated), household test split | `household_calibration_cv`, `household_test` |
 | pooled new domains | `new_domains_pooled` (`production_cell` + `mobile_robot`) |
 | TRUST-NAV with the completeness sentence | `trustnav_complete` |
@@ -151,7 +185,7 @@ own licences (previous section).
 ```
 @unpublished{derner_catway,
   author = {Erik Derner},
-  title  = {{CATWAY}: Calibrated three-way decisions for language-model robot agents that execute, ask or refuse},
+  title  = {{CATWAY}: Cost-sensitive three-way decisions with calibrated confidence for language-model robot agents},
   note   = {Manuscript under review},
   year   = {2026}
 }

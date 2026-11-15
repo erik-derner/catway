@@ -1,0 +1,2 @@
+status,n_household_items,n_groups,n_forced_groups,n_forced_items,splits_of_forced_items,n_calibration_items,note
+supplementary analyses (exploratory): recomputed from the stored answers,873,519,30,93,calibration,432,processed household items (after dropping ghosts); rule of build_data.assign_split

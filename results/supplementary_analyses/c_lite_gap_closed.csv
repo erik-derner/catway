@@ -1,0 +1,13 @@
+status,set,statistic,reference,reference_cost,lite_cost,catway_cost,share_of_gap_closed
+supplementary analyses (exploratory): recomputed from the stored answers,household_test,mean,stated probabilities,0.39304610733182166,0.3246409674981104,0.2773998488284202,0.5915032679738559
+supplementary analyses (exploratory): recomputed from the stored answers,household_test,mean,vote-only gate,0.372260015117158,0.3246409674981104,0.2773998488284202,0.5019920318725096
+supplementary analyses (exploratory): recomputed from the stored answers,household_test,worst,stated probabilities,0.5600907029478458,0.4897959183673469,0.36054421768707484,0.35227272727272735
+supplementary analyses (exploratory): recomputed from the stored answers,household_test,worst,vote-only gate,0.5759637188208617,0.4897959183673469,0.36054421768707484,0.4000000000000002
+supplementary analyses (exploratory): recomputed from the stored answers,new_domains_pooled,mean,stated probabilities,0.08287292817679558,0.072744014732965,0.05156537753222837,0.32352941176470607
+supplementary analyses (exploratory): recomputed from the stored answers,new_domains_pooled,mean,vote-only gate,0.11694290976058931,0.072744014732965,0.05156537753222837,0.6760563380281691
+supplementary analyses (exploratory): recomputed from the stored answers,new_domains_pooled,worst,stated probabilities,0.1712707182320442,0.1712707182320442,0.13812154696132597,0.0
+supplementary analyses (exploratory): recomputed from the stored answers,new_domains_pooled,worst,vote-only gate,0.292817679558011,0.1712707182320442,0.13812154696132597,0.7857142857142857
+supplementary analyses (exploratory): recomputed from the stored answers,trustnav,mean,stated probabilities,0.11952861952861953,0.12626262626262627,0.11952861952861954,
+supplementary analyses (exploratory): recomputed from the stored answers,trustnav,mean,vote-only gate,0.2415824915824916,0.12626262626262627,0.11952861952861954,0.9448275862068966
+supplementary analyses (exploratory): recomputed from the stored answers,trustnav,worst,stated probabilities,0.16161616161616163,0.14646464646464646,0.1414141414141414,0.75
+supplementary analyses (exploratory): recomputed from the stored answers,trustnav,worst,vote-only gate,0.4898989898989899,0.14646464646464646,0.1414141414141414,0.9855072463768115

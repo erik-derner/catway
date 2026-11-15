@@ -1,0 +1,7 @@
+status,model,config,set,n,n_unanimous_clear,n_unanimous_clear_wrong,M_execute_minus_ask_saving,ci_low,ci_high,per_test_split_item
+supplementary analyses (exploratory): recomputed from the stored answers,claude-haiku,Haiku-R,household_test,441,163,8,0.7055214723926381,0.5054433497536946,0.8853503184713376,0.26077097505668934
+supplementary analyses (exploratory): recomputed from the stored answers,claude-haiku-nothink,Haiku-N,household_test,441,176,31,-0.056818181818181816,-0.32077156334231804,0.22807017543859648,-0.022675736961451247
+supplementary analyses (exploratory): recomputed from the stored answers,gemma,Gemma-N,household_test,441,199,38,-0.11557788944723618,-0.36619718309859156,0.15151515151515152,-0.05215419501133787
+supplementary analyses (exploratory): recomputed from the stored answers,gemma-think,Gemma-R,household_test,441,176,11,0.625,0.4153658536585366,0.8203592814371258,0.2494331065759637
+supplementary analyses (exploratory): recomputed from the stored answers,gpt-luna,Luna-N,household_test,441,134,15,0.3283582089552239,0.029411764705882353,0.6160255319148933,0.09977324263038549
+supplementary analyses (exploratory): recomputed from the stored answers,gpt-luna-think,Luna-R,household_test,441,142,5,0.7887323943661971,0.5973154362416108,0.9555555555555556,0.25396825396825395

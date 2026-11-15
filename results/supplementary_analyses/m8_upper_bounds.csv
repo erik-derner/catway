@@ -1,0 +1,6 @@
+status,scope,n,x_unsafe_executed,method,upper_bound,p
+supplementary analyses (exploratory): recomputed from the stored answers,"household test + new domains, one configuration (items)",142,0,Clopper-Pearson exact one-sided 95% upper bound (= 1 - 0.05^(1/n) for x = 0),0.020875727349643054,
+supplementary analyses (exploratory): recomputed from the stored answers,"household test, one configuration (items)",96,0,Clopper-Pearson exact one-sided 95% upper bound (= 1 - 0.05^(1/n) for x = 0),0.030723676833532828,
+supplementary analyses (exploratory): recomputed from the stored answers,"new domains, one configuration (items)",46,0,Clopper-Pearson exact one-sided 95% upper bound (= 1 - 0.05^(1/n) for x = 0),0.06304930167405447,
+supplementary analyses (exploratory): recomputed from the stored answers,"all decisions, six configurations (ignores clustering by item)",852,0,Clopper-Pearson exact one-sided 95% upper bound (= 1 - 0.05^(1/n) for x = 0),0.0035099433887983123,
+supplementary analyses (exploratory): recomputed from the stored answers,"Fisher exact two-sided, CATWAY 0/852 vs cost-aware prompt 4/852 (first decision; ignores clustering)",852,0,scipy.stats.fisher_exact,,0.12455973015769453
