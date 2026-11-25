@@ -1,7 +1,10 @@
 # CATWAY: Cost-sensitive agentic three-way robot decisions with calibrated language-model confidence
 
-Code, data, model answers and result tables for the paper *CATWAY: Cost-sensitive agentic three-way robot
-decisions with calibrated language-model confidence*. A robot agent driven by a language model
+[![arXiv](https://img.shields.io/badge/arXiv-2611.31694-b31b1b.svg)](https://arxiv.org/abs/2611.31694)
+
+Code, data, model answers and result tables for the paper by Erik Derner, "CATWAY: Cost-sensitive
+agentic three-way robot decisions with calibrated language-model confidence", arXiv:2611.31694, 2026
+([arxiv.org/abs/2611.31694](https://arxiv.org/abs/2611.31694)). A robot agent driven by a language model
 must decide whether to execute an instruction, ask a clarifying question or refuse. CATWAY is a
 cost-sensitive three-way decision gate: a loss matrix over four instruction conditions (clear, ambiguous,
 infeasible, unsafe) fixes execute, ask and refuse regions on the probability simplex, with the clarifying
@@ -12,7 +15,8 @@ gate is fitted on household instructions, frozen, and tested in-domain, in two n
 an external benchmark, against prompted, agent and fitted baselines. The repository contains the
 benchmark (household instructions built from public sources, two authored robot domains and the
 external TRUST-NAV set), the code that queries the models, all stored model answers, and the analysis
-that produces every table and figure of the paper and its supplement from them.
+that produces every table and figure of the paper and its supplement from them. Please cite the paper
+when you use the code, the benchmark or the stored answers (see [Citation](#citation)).
 
 ## Layout
 
@@ -183,10 +187,14 @@ own licences (previous section).
 ## Citation
 
 ```
-@unpublished{derner_catway,
-  author = {Erik Derner},
-  title  = {{CATWAY}: Cost-sensitive agentic three-way robot decisions with calibrated language-model confidence},
-  note   = {Manuscript under review},
-  year   = {2026}
+@misc{derner2026catway,
+  title         = {{CATWAY}: Cost-sensitive agentic three-way robot decisions with calibrated language-model confidence},
+  author        = {Derner, Erik},
+  year          = {2026},
+  eprint        = {2611.31694},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  doi           = {10.48550/arXiv.2611.31694},
+  url           = {https://arxiv.org/abs/2611.31694}
 }
 ```
